@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="left-header">
+      <img id="header-logo" src="../../shared/img/logo.png" alt="Logo">
+    </div>
+    <div id="header-title">ELECTRIC VEHICLES LEARNING LAB</div>
+  </header>
+  <a href="../../index/index.html"><img src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+  <div class="app">
+    <div class="side-panel" id="left-menu">
+      <h3 style = "text-align: center;">Inverter</h3>
+      <hr style="border-color: black;">
+        <ul>
+            <li class="active" onclick="componentActive(this)" id="topic1">Introduction</li>
+            <li onclick="componentActive(this)" id="topic2">Classification</li>
+            <li onclick="componentActive(this)" id="topic3">Series Inverter</li>
+            <li onclick="componentActive(this)" id="topic4">Parellel Inverter</li>
+            <li onclick="componentActive(this)" id="topic5">Bridge Inverter</li>
+            <li onclick="componentActive(this)" id="topic6">Application</li> 
+        </ul>
+    </div>
+    <div class="main-panel" id="right-menu">
+      
+
+      <div class="topicContent" id="topic1Section">
+        <h3 style="text-align: center;">Introduction to Inverter</h3>
+        <hr>
+        <div class=" contentWrapper">
+          <p>An Inverter converts fixed DC voltage to an output AC voltage of variable frequency and of fixed or variable magnitude</p>
+          <p><b> Inverters are of three types:</b></p>
+          <p><b>(1) Series Inverter:</b> Series Inverter produces an approximately sinusodial Waveforms at a high frequency </p>
+          <p><b>(2)Parellel Inverter:</b>Parellel Inverter is used to produce a square waveform from a DC supply </p>
+          <p><b>(2)Bridge Inverter:</b>Bridge Inverter is used to produce a rectangular waveform from a DC supply  </p>
+          <img src="../assets/img/introdutionInverter.png" alt="Inverter" style="max-width: 70%;">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/intro-inverter.pdf")'>View PDF</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic2Section" style="display: none;">
+        <h3 style="text-align: center;">Classification of Inverter</h3>
+        <hr>
+        <p style="color: red; text-align: center; font-weight: normal;">Too see the details, move the mover over the labels/button</p>
+        <div class="topics-container" style="margin: 10px 0;">
+          <button onmouseover="showContent(0)">Series Inverter</button>
+          <button onmouseover="showContent(1)">Parellel Inverter</button>
+          <button onmouseover="showContent(2)">Bridge Inverter</button>
+        </div>
+        <div class="topics-display contentWrapper" >
+          <p class="box"><b style="color: blue;">Series Inverter: </b>The commutating elements may come in series with the load or in parallel with the load during operations. In this type of inverters, as indicated by the name, the commutating elements, viz. L and C are connected with the load. This constitutes a series R-L-C resonants Circuit. This type of thyristorised inverter produce an approximately sinusoidal waveforms at a high output frequency, ranging from 200Hz to 100KHz, and is commonly used in relatively fixed output application. </p>
+          <p class="box"><b style="color: blue;">Parellel Inverter: </b>A parallel inverter is used to produce a square-wave from a DC supply. Basically, by alternately switching the two Thyristors, the DC source is connected in alternative sense to the two halves of the transformer primary, thereby inducing a square-wave voltage across the load in the transformer secondary. In this inverter, the commutating capacitor comes in parallel with the</p>
+          <p class="box"><b style="color: blue;">Bridge Inverter: </b>Single phase bridge inverter which needs four SCR and four freewheeling diodes. The sequence of SCR gating and the SCR T1 and 0T2 must be gated simultaneously and T3 and T4 must be gated 180 out of phase. When SCR1 and SCR 4 conduct, the output voltage will be positive EDC and when SCR2 and SCR3 conduct, the output voltage will be negative -EDC Diodes D1 to D4 serve to feed the load reactive power back to the DC supply. The load voltage waveform is fairly rectangular and is not affected by the nature of the load. This is an advantage of bridge inverter over the series inverter.</p>
+          
+        </div>
+      </div>
+      
+
+      <!-- Start from here  -->
+      <div class="topicContent" id="topic3Section" style="display: none;">
+        <h3 style="text-align: center;">Series Inverter</h3>
+        <hr>
+        
+        <div class="topics-display contentWrapper">
+          <p>In this type of inverters, the commutating elements, viz. L and C are connected in series with the load. This constitutes a series R-L-C resonant circuit. If the load is purely resistive, it only has resistance in the circuit. In case of load being inductive or capacitive in nature, its inductance or capacitance part is added to the commutating elements (being in series)</p>
+          <img src="../assets/img/seriesinverter.png" alt="Series Inverter">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/SeriesInverter.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/seiesInverter/index.html")'>Simulation</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="topicContent" id="topic4Section" style="display: none;">
+        <h3 style="text-align: center;">Parellel Inverter</h3>
+        <hr>
+        
+        <div class="topics-display contentWrapper">
+          <p>A parallel inverter is used to produce a square-wave from a DC supply. Basically, by alternately switching the two Thyristors, the DC source is connected in alternative sense to the two halves of the transformer primary, thereby inducing a square-wave voltage across the load in the transformer secondary</p>
+          <img src="../assets/img/parellelinverter.png" alt="Parellel Inverter">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/parallelInverter.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/parallelInverter/index.html")'>Simulation</button>
+          </div>
+        </div>
+      
+      </div>
+
+      <div class="topicContent" id="topic5Section" style="display: none;">
+        <h3 style="text-align: center;">Bridge Inverter</h3>
+        <hr>
+        
+        <div class="topics-display contentWrapper" >
+          <p>The DC to AC power converters are known as Inverters. An Inverter is a circuit, which converts a dc power into an ac power at desired output voltage and frequency. The ac output voltage could be fixed or variable frequency. This conversion can be achieved either by controlled turn on and turn off devices (e.g. BJT's, MOSFETS, IGBTS, MCTS, SITS, GTOs, and SITHS) or by forced commutated thyristors, depending on applications.</p>
+          <img src="../assets/img/bridgeinverter.png" alt="Bridge Inverter">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/bridgeInveter.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/bridgeInverter/index.html")'>Simulation</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic6Section" style="display: none;">
+        <h3 style="text-align: center;">Applications</h3>
+        <hr>
+        <div class="topics-display contentWrapper">
+          <b><p>1. Speed control of AC motor.<br><br>2. Induction Heating .<br><br>3. UPS(Uninteruptible Power Supply).<br><br>4. High Voltage DC Transmission lines (HVDC line).<br><br>5 Aircraft Power Supply.</p></b>
+        </div>
+      </div>
+
+      <div class="demo-layout">
+        <a href="../../index/index.html"><img style="position: absolute; left: 20px; top: 5px; width: 20px; height: 20px; border-radius: 50%;" src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+        <h3>Buy full version to unlock all the content & features</h3>
+        <button><a href="https://www.nvistech.com/contact-us-experiential-learning/" target="_blank">Contact @ NVIS Technologies Pvt. Ltd</a></button> 
+      </div>
+
+      
+      <div id="pdfContent">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-pdf">
+        <div id="pdf-viewer"></div>
+      </div>
+
+      <div id="simulation-frame">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-sim">
+        <iframe id="simIframe" frameborder="0"></iframe>
+      
+    </div>
+  </div>
+  
+  <script src="renderer.js"></script>
+</body>
+</html>

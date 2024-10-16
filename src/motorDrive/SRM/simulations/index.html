@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="../../../shared/js/chart.umd.js"></script>
+</head>
+<body>
+  <header>
+    <div class="left-header">
+      <img id="header-logo" src="../../../shared/img/logo.png" alt="Logo">
+    </div>
+    <div id="header-title">SWITCHED RELUCTANCE MOTOR</div>
+  </header>
+  <a href="../index.html"><img src="../../../shared/img/back.png" alt="back" class="back-btn"></a>
+  <div class="app">
+    <div class="circuitslider">
+      <img src="./powerConverter.png" alt="SRM" style="border-radius: 8px; padding: 14px ; border: 2px solid black; max-width: 55%; height: auto; margin-bottom: 10px;">
+      <h4 style="margin-top: 5px;">Power Converter Circuit</h4>
+      <video id="srmVideo" src="../../SRM/simulations/SRM.mp4" style="border-radius: 14px; border: 2px solid black; height: 50%; margin-bottom: 10px;" autoplay loop></video>
+      <h4 style="margin-top: 5px;">SWITCHED RELUCTANCE MOTOR</h4>
+      <div class="sliderWindow">
+        <label for="slider">Speed:</label>
+        <input type="range" id="slider" min="1" max="100" value="1">
+        <span id="sliderValue">0</span>
+        <p style="font-weight: bold; margin: 0; margin-left: 5px; font-size: 14px;">RPM</p>
+      </div>
+    </div>
+    <div class="chartWindow">
+      <div class="chart-container">
+        <canvas class="chart-canvas" id="chart1"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas class="chart-canvas" id="chart2"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas class="chart-canvas" id="chart3"></canvas>
+      </div>
+  </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+</head>
+<body >
+  <header>
+    <div class="left-header">
+      <img id="header-logo" src="../../shared/img/logo.png" alt="Logo">
+    </div>
+    <div id="header-title">ELECTRIC VEHICLE LEARNING</div>
+  </header>
+  <a href="../../index/index.html"><img src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+  <div class="app">
+
+    <div class="main-panel" id="right-menu">
+      <div class="topicContent" id="topic1Section">
+        <h3 style="text-align: center;width: 100%;margin: 0;background: white;padding: 1em 0;">Controller Area Network (CAN)</h3>
+        <hr style="width: 100%; margin: 0;">
+        <div class="topics-display">
+            <img src="../CAN/img/main_can.png" alt="CAN" style="height: 40%; width:40%;">
+            <div class="theory-window">
+                <h2>Overview</h2>
+                <p> The Controller Area Network (CAN) is a widely adopted communication protocol developed by Bosch in the mid-1980s, initially for the automotive industry. It serves as a robust and efficient means of real-time data exchange between microcontrollers and other electronic devices. CAN employs a message-oriented approach, encapsulating data in frames with unique identifiers to determine priority and content. Its characteristic features are: </p>
+                <br>
+                <li>Message-Oriented Protocol</li>
+                <li>Collision Avoidance</li>
+                <li>Fault Tolerance</li>
+                <li>Simple Wiring</li>
+                <li>Scalability </li>
+                <img src="./img/fig-1.png" alt="fig-1" style="max-width: 80%";">
+                <p>In a CAN (Controller Area Network) bus system, nodes communicate with each other through a shared communication medium known as the bus. The bus serves as a central communication channel that connects all the nodes within the network. Each node in the system is typically a microcontroller or electronic device capable of sending and receiving messages. <br><br>The CAN bus is terminated using a 120-ohm resistor at both ends of the bus, typically at the physical extremities of the transmission lines. This resistor matches the characteristic impedance of the transmission line, effectively preventing signal reflections that can occur when a transmitted signal encounters an impedance mismatch. By absorbing the energy of reflected signals, the termination resistor ensures that the signals do not interfere with the ongoing communication on the bus. <br><br>CAN High (CAN_H) and CAN Low (CAN_L) represent the differential transmission system used by the CAN bus. The CAN protocol relies on the voltage difference between CAN_H and CAN_L for communication. <br><br>One benefit of employing this technique is that in the event of a voltage spike induced in the cable, both conductors are equally influenced. Consequently, the voltage difference between the two conductors remains intact, thereby furnishing the CAN network with a high level of immunity against electrical noise. <br><br>CAN employs a message-oriented framework where data is encapsulated within frames. These frames feature unique identifiers, crucial for determining the priority and content of the transmitted messages.  <br><br>A distinctive aspect of CAN lies in its collision avoidance mechanism. Using non-destructive bitwise arbitration, the protocol ensures seamless communication even in scenarios where multiple nodes attempt simultaneous data transmission. This is particularly vital in applications requiring real-time responsiveness. <br><br>CAN has built-in fault-tolerant features. Error-detection mechanisms, such as Cyclic Redundancy Check (CRC), help identify and correct errors, enhancing the reliability of data transmission. <br><br>CAN uses a two-wire twisted-pair cable (CAN_H and CAN_L), simplifying the wiring in comparison to other communication protocols. <br><br>The CAN protocol is designed to support a large number of devices on a network, making it easy to add new devices or remove existing ones as needed. <br><br>In this setup, every node within the system receives every message transmitted on the bus. It becomes the responsibility of each individual node to independently determine whether the received message should be promptly discarded or retained for further processing. The decision-making process occurs at the level of each node based on its specific requirements and functionalities within the network. <br><br>An important advantage of employing a message-based protocol is the ease of integrating additional nodes into the system without requiring the reprogramming of existing nodes to acknowledge these additions. When a new node is introduced, it automatically begins receiving messages from the network. Subsequently, it evaluates the received information based on the message identifier (ID) to determine whether to process or discard the information. This flexibility simplifies the expansion of the network, allowing for seamless integration of new nodes without necessitating comprehensive adjustments to the existing system.</p>
+                <h4>CAN Node Structure: </h4>
+                <img src="./img/node-struct.png" alt="fig-2" style="max-height: 50%; max-width: 80%;">
+                <h4>CAN Controller:</h4>
+                <p>The CAN controller is responsible for managing the communication on the CAN bus. It handles tasks such as creating and interpreting CAN frames, error detection and handling, and controlling the timing of message transmission. The CAN controller can be a standalone hardware component or integrated into a microcontroller.</p>
+                <h4>CAN Transceiver:</h4>  
+                <p>The transceiver is the interface between the CAN controller and the physical CAN bus. It converts the digital signals from the CAN controller into the appropriate voltage levels for transmission on the bus and vice versa. The transceiver also helps with tasks like collision detection and arbitration on the bus.</p>  
+                <h4>Microcontroller (or Microprocessor):</h4>
+                <p>The microcontroller is the brain of the CAN node. It manages the higher-level functionality and application-specific tasks. This includes tasks like processing data, making decisions based on received messages, and interacting with other components of the system. The microcontroller is often responsible for configuring the CAN controller, handling application-specific protocols, and responding to or initiating communications on the CAN bus. <br><br>The combination of these three components enables the CAN node to participate in a robust and fault-tolerant communication network.</p>  
+                <h3>Advantages of CAN:</h3>
+                <ul>
+                  <li> <h4>High Reliability:</h4> <p>The CAN protocol's design emphasizes robustness and fault tolerance, making it well-suited for critical systems like engine control and braking in automobiles. <br><br>The protocol's ability to continue functioning even in the presence of faults ensures reliable communication, which is crucial for the safety and performance of vehicles.</p></li>
+                  <li> <h4>Low Cost:</h4> <p>CAN's simple and efficient signaling method contributes to cost-effectiveness in implementation. <br><br>In the automotive industry, where cost considerations are paramount, the affordability of CAN makes it a preferred choice for various applications.</p></li>
+                  <li> <h4>Low Weight and Minimal Wiring:</h4> <p>The CAN protocol's use of a two-wire bus system reduces the amount of wiring required in vehicles. <br><br>The reduction in wiring not only lowers costs but also contributes to weight reduction, potentially improving fuel efficiency and overall vehicle performance.</p></li>
+                  <li> <h4>Scalability:</h4> <p>CAN is designed to support a large number of devices on a network, providing scalability.
+                    This feature makes it easy to add new devices or remove existing ones without significant changes to the overall system, offering flexibility in expanding or modifying the vehicle's electronic architecture.</p></li>
+                </ul>
+                <h3>Application of CAN :</h3>
+                <ul>
+                  <li> <h4>Automotive Sector:</h4> <p>Originating for automotive applications, the CAN protocol finds extensive use in diverse systems within modern vehicles. It is employed for tasks ranging from managing engine and transmission functions to overseeing anti-lock brake systems and controlling electronic components in the vehicle's body.</p></li>
+                  <li> <h4>Industrial Automation:</h4> <p>Within industrial automation systems, the CAN protocol serves as a communication backbone. It facilitates seamless interaction among devices, enabling the coordination of actions such as motor control, sensor feedback, and the operation of various industrial equipment.</p></li>
+                  <li> <h4>Building Automation:</h4> <p>The CAN protocol plays a pivotal role in building automation systems, serving to regulate and monitor diverse building functions. These include the management of heating, ventilation, air conditioning (HVAC) systems, lighting controls, and security systems, fostering efficient and integrated control of building infrastructure.</p></li>
+                </ul>
+            </div>
+          <!-- SIMULATION under development -->
+          <!-- <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/basicFiringCircuitforSCR.pdf")'>Theory</button>   
+            <button class="viewSimulation" onclick='startSimulation("simulations/resistanceFiring/index.html")'>Simulation</button>
+          </div> -->
+        </div>
+      </div>   
+
+
+      <div class="demo-layout">
+        <a href="../../index/index.html"><img style="position: absolute; left: 20px; top: 5px; width: 20px; height: 20px; border-radius: 50%;" src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+        <h3>Buy full version to unlock all the content & features</h3>
+        <button><a href="https://www.nvistech.com/contact-us-experiential-learning/" target="_blank">Contact @ NVIS Technologies Pvt. Ltd</a></button>
+        </div>
+        
+
+      <div id="pdfContent">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-pdf">
+        <div id="pdf-viewer"></div>
+      </div>
+
+      <div id="simulation-frame">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-sim">
+        <iframe id="simIframe" frameborder="0"></iframe>
+      </div>
+      
+    </div>
+  </div>
+  
+  <script src="renderer.js"></script>
+</body>
+</html>

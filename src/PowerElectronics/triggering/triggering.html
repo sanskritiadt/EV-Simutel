@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+</head>
+<body >
+  <header>
+    <div class="left-header">
+      <img id="header-logo" src="../../shared/img/logo.png" alt="Logo">
+    </div>
+    <div id="header-title">ELECTRIC VEHICLES LEARNING LAB</div>
+  </header>
+  <a href="../../index/index.html"><img src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+  <div class="app">
+    <div class="side-panel" id="left-menu">
+      <h3 style = "text-align: center;">Triggering and Commutation</h3>
+      <hr style="border-color: black;">
+        <ul>
+            <li class="active" onclick="componentActive(this)" id="topic1">Turn-ON method of a Thryistor</li>
+            <li onclick="componentActive(this)" id="topic2">Gate Triggering methods</li> 
+            <li id="subItem" style="margin-bottom: 0;">Turn-OFF method of a Thryistor
+              <div id="subItemSection" class="sub-menu" onmouseleave="hideSubmenu()">
+                <ol>
+                  <li id="topic3" onclick="componentActive(this)">Introduction</li>
+                  <li id="topic4" onclick="componentActive(this)">Classification</li>
+                  <li id="topic5" onclick="componentActive(this)">Class-A Commutation</li>
+                  <li id="topic6" onclick="componentActive(this)">Class-B Commutation</li>
+                  <li id="topic7" onclick="componentActive(this)">Class-C Commutation</li>
+                  <li id="topic8" onclick="componentActive(this)">Class-D Commutation</li>
+                  <li id="topic9" onclick="componentActive(this)">Class-E Commutation</li>
+                  <li id="topic10" onclick="componentActive(this)">Class-F Commutation</li>
+                </ol>
+              </div>
+            </li>
+        </ul>
+    </div>
+    <div class="main-panel" id="right-menu">
+      <div class="topicContent" id="topic1Section">
+        <h3 style="text-align: center;">Turn-ON method of a Thryistor</h3>
+        <hr>
+        <p style="color: red; text-align: center; font-weight: normal;">Too see the details, move the mover over the labels/button</h4>
+        <div class="topics-container">
+          <button onmouseover="showContent(0)">DC Gate Triggering</button>
+          <button onmouseover="showContent(1)">Thermal Triggering</button>
+          <button onmouseover="showContent(2)">Light Triggering</button>
+          <button onmouseover="showContent(3)">dv/dt Triggering</button>
+        </div>
+        <div class="topics-display">
+          <p class="box">When anode -to-cathode forward voltage is increased with gate circuit open, the reverse biased junction J2 will have an avalanche breakdown at a voltage called forward, breakover voltage VBO.  At this voltage, a thyristor changes from OFF state (high voltage with low leakage current) to ON-state characterized by a low voltage across it with large forward current. The forward voltage drop across the SCR during the ON state is of the order of 1to 1.5V and increases slightly with load current.</p>
+          <p class="box">Like any other semiconductor, the width of the depletion layer of a thyristor decreases on increasing the junction temperature. Thus, in a thyristor when the voltage applied between the anode and cathode is very near to its breakdown voltage, the device can be triggered by increasing its junction temperature. By increasing the temperature to a certain value (within the specified �limit), a situation comes when the reverse biased junction collapses making the device conduct. This method of triggering the device by heating is known as the thermal triggering process.</p>
+          <p class="box">In this method, as the name suggests, the energy is imparted by radiation. Thyristor is bombarded by energy particles such as neutrons or photons. With the help of this external energy, electron-hole pairs are generated in the device, thus increasing the number of charge carriers. This lead to instantaneous flow of current within the device and the triggering of the device. For radiation triggering to occur, the device must have high value of rate of change of voltage(dv/dt). Light activated silicon controlled rectifier (LASCR) and light activated silicon controlled switch (LASCS) are the exaples of this type of triggering.</p>
+          <p class="box">We know that with forward voltage across the anode and cathode of a device, the junctions J1 and J3 are forward biased. Whereas the junction J2 becomes reverse biased. This reverse biased junction J2 has the characteristics of a capacitor due to charges existing across the junction. If a forward voltage is suddenly applied, a charging current will flow tending to turn the device ON. If the voltage impressed across the device is denoted by V, the charge by Q and the capacitance by Cj, then <br> ic = Dq/dt = d/dt (Cj V) = Cj dv/dt + V dCj/dt <br> The rate of change of junction capacitance may be negligible as the junction capacitance is almost constant. The contribution to charging current by the later term is negligible. Hence, Eq. reduces to <br> ic = Cj dV/dt <br>Therefore, if the rate of change of voltage across the device is large, the device may turn -on even through the voltage appearing across the device is small.</p>
+        </div>
+        <div class="actionContainer">
+          <button class="viewPdf" onclick='loadPdf("../assets/Turn–On.pdf")'>View PDF</button>
+        </div>
+      </div>
+
+
+      <div class="topicContent" id="topic2Section" style="display: none;">
+        <h3 style="text-align: center;">Gate Triggering Methods</h3>
+        <hr>
+        <p style="color: red; text-align: center; font-weight: normal;">Too see the details, move the mover over the labels/button</h4>
+        <div class="topics-container">
+          <button onmouseover="showContent(0)">DC Gate Triggering</button>
+          <button onmouseover="showContent(1)">AC Gate Triggering</button>
+          <button onmouseover="showContent(2)">Pulse Gate Triggering</button>
+        </div>
+        <div class="topics-display">
+          <p class="box">In this type of triggering , a DC voltage of proper magnitude and polarity is applied between the gate and the cathode of the device in such a way that the gate becomes positive with respect to the cathode. When the applied voltage is sufficient to produce the required gate current , the device starts conducting. \n\tOne drawback of this scheme is that both the power and control circuit are DC and there is no isolation between the two another disadvantage of this process is that a continuous DC signal has to be applied, at the gate causing more gate power loss.</p>
+          <p class="box">AC source is most commonly used for the gate signal in all application of thyristor control adopted for AC applications. This scheme provides the proper isolation between the power and the control circuits. The firing angle control is obtained vary conveniently by changing the phase angle of the control signal.\n\tHowever, the gate drive is maintained for one half cycle after the device is turned ON, and a reverse voltage is applied between the gate and the cathode during the negative half cycle. The drawback of this scheme is that a separate transformer is required to step down the AC supply, which adds to the cost.</p>
+          <p class="box">In this method, as the name suggests, the energy is imparted by radiation. Thyristor is bombarded by energy particles such as neutrons or photons. With the help of this external energy, electron-hole pairs are generated in the device, thus increasing the number of charge carriers. This lead to instantaneous flow of current within the device and the triggering of the device. For radiation triggering to occur, the device must have high value of rate of change of voltage(dv/dt). Light activated silicon controlled rectifier (LASCR) and light activated silicon controlled switch (LASCS) are the exaples of this type of triggering.</p>
+        </div>
+        <div class="actionContainer">
+          <button class="viewPdf" onclick='loadPdf("../assets/Gate-Triggering.pdf")'>View PDF</button>
+        </div>
+      </div>
+
+
+      <div class="topicContent" id="topic3Section" style="display: none;">
+        <h3 style="text-align: center; font-size: 22px;">Introduction of Commutation (Turn off Method)</h3>
+        <hr>
+        <div class="contentWrapper">
+          <p style="text-align: center; font-weight: normal;">Commutation is the process of turning Off, a conducting thyristor is
+            called Commutation</p>
+          <h4>Commutation are of two types: </h4>
+          <p><b style="color: blue;">(A) Natural Commutation: </b>In case of AC circuits, as the current passes through natural zero, a reverse voltage is simultaneously appeared across the device. The device is immediately turned off. This process is called as Natural Commutation and no external circuit is required for this purpose.</p>
+          <p><b style="color: blue;">(A) Forced Commutation: </b>In case of DC circuits, switching of thryistors, forward current should be forced to be zero by means of some external circuit. This process is called Forced Commutation and the ciruits which are used to turn off the thryistor are known as Commutation circuits.</p>
+        </div>
+        <div class="actionContainer">
+          <button class="viewPdf" onclick='loadPdf("../assets/COMMUTATION.pdf")'>View PDF</button>
+        </div>
+      </div>
+
+
+      <div class="topicContent" id="topic4Section" style="display: none;">
+        <h3 style="text-align: center;">Turn-ON method of a Thryistor</h3>
+        <hr>
+        <p style="color: red; text-align: center; font-weight: normal;">Too see the details, move the mover over the labels/button</h4>
+        <div class="topics-container" style="margin: 10px 0;">
+          <button onmouseover="showContent(0)">Natural Commutation</button>
+          <button onmouseover="showContent(1)">Forced Commutation</button>
+        </div>
+        <h3 style="margin: 0; padding-left: 20px;">Types of Forced Commutation: </h3>
+        <div class="topics-container" >
+          <button onmouseover="showContent(2)">Class-A</button>
+          <button onmouseover="showContent(3)">Class-B</button>
+          <button onmouseover="showContent(4)">Class-C</button>
+          <button onmouseover="showContent(5)">Class-D</button>
+          <button onmouseover="showContent(6)">Class-E</button>
+          <button onmouseover="showContent(7)">Class-F</button>
+        </div>
+        <div class="topics-display">
+          <p class="box">In case of AC circuits, as the current passes through natural zero, a reverse voltage is simultaneously appeared across the device. The device is immediately turned off. This process is called as Natural Commutation and no external circuit is required for this purpose.</p>
+          <p class="box">In case of DC circuits, switching of thryistors, forward current should be forced to be zero by means of some external circuit. This process is called Forced Commutation and the ciruits which are used to turn off the thryistor are known as Commutation circuits.</p>
+          <p class="box"><b style="color: blue;">Class A Commutation: </b>In this type of commutation circuit using LC component in series with the load or capacitor parallel with the load.</p>
+          <p class="box"><b style="color: blue;">Class B Commutation: </b>In this type of commutation LC resonating circuit is connect to across the SCR not in series with the load.</p>
+          <p class="box"><b style="color: blue;">Class C Commutation: </b>In this type of commutation main thryistor T1 that is to be commutated is connected in series with the load. An additional thryistor T2, called complimentary thryistor is connected in parallel with the main thryistor.</p>
+          <p class="box"><b style="color: blue;">Class D Commutation: </b>In this type of commutation auxiliary thryistor T2 is required to commutate main thryistor T1. Assuming ideal thryistor and loss</p>
+          <p class="box"><b style="color: blue;">Class E Commutation: </b>In this type of commutation reverse voltage is applied to current carrying thryistor from an external pulse source.</p>
+          <p class="box"><b style="color: blue;">Class F Commutation: </b>In this type of commutation supply is an alternating voltages (AC), load current will flow during positive half cycle. During negative half cycle thryistor will turn off due to negative polarity across it.</p>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic5Section" style="display: none;">
+        <h3 style="text-align: center; font-size: 22px;">Class-A Commutation Circuit</h3>
+        <hr>
+        <div class="contentWrapper">
+          <p><b style="color: blue;">Commutation: </b>Commutation is the process of turning Off, a conducting thryistor is called Commutation.</p>
+          <p><b style="color: blue;">Class-A Self Commutation By Resonating Load: </b>This is also known as resonant commutation. In this process of commutation, the forward current passing through the device is reduced to less than the level of holding current of the device. Hence, this method is also known as the current commutation method.</p>
+        </div>
+        <div class="actionContainer">
+          <button class="viewPdf" onclick='loadPdf("../assets/Class-A.pdf")'>View PDF</button>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic6Section" style="display: none;">
+        <h3 style="text-align: center; font-size: 22px;">Class-B Commutation Circuit</h3>
+        <hr>
+        <div class="contentWrapper">
+          <p><b style="color: blue;">Commutation: </b>Commutation is the process of turning Off, a conducting thryistor is called Commutation.</p>
+          <p><b style="color: blue;">Class-B Self Commutation by an LC circuit: </b>In this method, the LC resonating circuit is across the SCR and not in series with the load.</p>
+        </div>
+        <div class="actionContainer">
+          <button class="viewPdf" onclick='loadPdf("../assets/Class-B.pdf")'>View PDF</button>
+        </div>
+      </div>
+
+
+      <div class="topicContent" id="topic7Section" style="display: none;">
+        <h3 style="text-align: center; font-size: 22px;">Class-C Commutation Circuit</h3>
+        <hr>
+        <div class="contentWrapper">
+          <p><b style="color: blue;">Commutation: </b>Commutation is the process of turning Off, a conducting thryistor is called Commutation.</p>
+          <p><b style="color: blue;">Class-C Complimentary Commutation: </b>In this method, the main thryistor (SCR T1) that is to be commutated is connected in series with the load. An additional thryistor  (SCR T2), called the complimentary thryistor is connected in parallel with main thryistor.</p>
+        </div>
+        <div class="actionContainer">
+          <button class="viewPdf" onclick='loadPdf("../assets/Class-C.pdf")'>View PDF</button>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic8Section" style="display: none;">
+        <h3 style="text-align: center; font-size: 22px;">Class-D Commutation Circuit</h3>
+        <hr>
+        <div class="contentWrapper">
+          <p><b style="color: blue;">Commutation: </b>Commutation is the process of turning Off, a conducting thryistor is called Commutation.</p>
+          <p><b style="color: blue;">Class-D Auxiliary Commutation (an auxiliary SCR switiching a charged capacitor): </b>In this commutation method, an auxiliary thryistor (T2) is required to commutate the main thryistor (T1), Assuming ideal thryistors and the lossless components. Here, inductor L is necessary to ensure the correct polarity on capacitor C. Thryistor T1 and load resistance RL form the power circuit; wheras L, D and T2 form the commutation circuit.</p>
+        </div>
+        <div class="actionContainer">
+          <button class="viewPdf" onclick='loadPdf("../assets/Class-D.pdf")'>View PDF</button>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic9Section" style="display: none;">
+        <h3 style="text-align: center; font-size: 22px;">Class-E Commutation Circuit</h3>
+        <hr>
+        <div class="contentWrapper">
+          <p><b style="color: blue;">Commutation: </b>Commutation is the process of turning Off, a conducting thryistor is called Commutation.</p>
+          <p><b style="color: blue;">Class-E External Pulse Commutation: </b>In Class E commutation method, the reverse voltage is applied to the current carrying thryistor from an external pulse source. Here, the commutating pulse is applied through a pulse-transformer which is suitably designed to have tight coupling between the primary and secondary.</p>
+        </div>
+        <div class="actionContainer">
+          <button class="viewPdf" onclick='loadPdf("../assets/Class-E.pdf")'>View PDF</button>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic10Section" style="display: none;">
+        <h3 style="text-align: center; font-size: 22px;">Class-F Commutation Circuit</h3>
+        <hr>
+        <div class="contentWrapper">
+          <p><b style="color: blue;">Commutation: </b>Commutation is the process of turning Off, a conducting thryistor is called Commutation.</p>
+          <p><b style="color: blue;">Class-F AC Line Commutation: </b>If the supply is an alternating voltage, load current will flow during the positive half cycle. During the negative half cycle, the SCR will turn-off due to the negative polarity across it. The duration of the half-cycle must be longer than the turn-off time of the SCR. The maximum frequency at which this circuit can operate depends on the turn-off time of SCR.</p>
+        </div>
+        <div class="actionContainer">
+          <button class="viewPdf" onclick='loadPdf("../assets/Class-F.pdf")'>View PDF</button>
+        </div>
+      </div>
+
+      <div class="demo-layout">
+        <a href="../../index/index.html"><img style="position: absolute; left: 20px; top: 5px; width: 20px; height: 20px; border-radius: 50%;" src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+        <h3>Buy full version to unlock all the content & features</h3>
+        <button><a href="https://www.nvistech.com/contact-us-experiential-learning/" target="_blank">Contact @ NVIS Technologies Pvt. Ltd</a></button> 
+      </div>
+
+      <div id="pdfContent">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-pdf">
+        <div id="pdf-viewer"></div>
+      </div>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

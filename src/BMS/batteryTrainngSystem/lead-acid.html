@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NVIS425A</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="../../../node_modules/raphael/raphael.min.js"></script>
+  <script src="../../../node_modules/justgage/justgage.js"></script>
+  <script src="../../shared/js/chart.umd.js"></script>
+</head>
+<body>
+  <header>
+    <div class="left-header">
+      <img id="header-logo" src="../../shared/img/logo.png" alt="Logo">
+    </div>
+    <div id="header-title">Lead-Acid Battery Characteristics</div>
+  </header>
+  <a href="../../index/index.html"><img src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+  <div id="app">
+    <svg class="svgOverlay">
+      <circle id="neutralCircle" r="8" stroke="black" stroke-width="2" fill="black" />
+      <circle id="liveCircle" r="8" stroke="black" stroke-width="2" fill="red" />
+      
+
+      <line class="lines" id="mainLine1"/>
+      <line class="lines" id="mainLine2"/>
+
+      <line class="lines" id="smpsLine1"/>
+      <line class="lines" id="smpsLine2"/>
+      <line class="lines" id="smpsLine3"/>
+      <line class="lines" id="smpsLine4"/>
+
+      <line class="lines" id="batteryLine1"/>
+      <line class="lines" id="batteryLine2"/>
+
+      <line class="lines" id="loadLine1" />
+      <line class="lines" id="loadLine2" />
+       
+
+      <text class="svgLabels" id="main-smpsText">230v AC</text>
+      <text class="svgLabels" id="smps-paramText">12V DC to Charge Controller</text>
+      <text class="svgLabels" id="battery-paramText">To Battery</text>
+      <text class="svgLabels" id="load-paramText">To Load</text>
+
+      <text class="svgLabels" id="main-smpsN">N</text>
+      <text class="svgLabels" id="main-smpsL">L</text>
+      <text class="svgLabels" id="smps-paramPos">+</text>
+      <text class="svgLabels" id="smps-paramNeg">-</text>
+      <text class="svgLabels" id="battery-paramPos">+</text>
+      <text class="svgLabels" id="battery-paramNeg">-</text>
+      <text class="svgLabels" id="load-paramPos">+</text>
+      <text class="svgLabels" id="load-paramNeg">-</text>
+    </svg>
+ 
+    <div id="left-column">
+      <button id="powerButton">Power</button>
+      <p>230V AC</p>
+      <p id="smpsLabel">SMPS Based Battery Charger</p>
+    </div>
+    <div id="center-column">
+      <div id="battery-parameters">
+        <h2>Battery Parameters</h2>
+        <div id="parameters-stats">
+          <div id="stats">
+            <p id="voltageStat">Voltage: 0V</p>
+            <p id="currentStat">Current: 0A</p>
+            <p id="socStat">SOC: 0%</p>
+            <p id="dodStat">DOD: 100%</p>
+            <div class="battery">
+              <div id="battery-container">
+                  <div id="progressBar"></div>
+              </div>
+              <div class="batteryHead"></div>
+            </div>
+            <p style="color: orange;" id="batteryStat">Battery Status: Idle</p>
+          </div>
+          <div id="chart-container">
+            <canvas id="voltageChart"></canvas>
+          </div>
+        </div>
+      </div>
+      <span id="batteryLabel">
+        <p>Lead-Acid Battery Pack</p>
+        <p>7500mAh, 12V</p>
+      </span>
+      <span id="parametersLabel"><p>Measurement of Battery Parameters</p></span>
+    </div>
+    <div id="right-column">
+      <div id="meters-container">
+        <div id="voltmeter">
+          <p>Voltmeter</p>
+        </div>
+        <div id="ammeter">
+          <p>Ammeter</p>
+        </div>
+      </div>
+      <div id="load-section">
+        <h2>Load Section</h2>
+        <div class="lights">
+          <div class="light">
+            <img src="../batteryTrainngSystem/img/lightoff.png" id="lightImg1" class="light-img">
+            <button class="lightButton" id="lightButton1">Load 1</button>
+          </div>
+          <div class="light">
+            <img src="../batteryTrainngSystem/img/lightoff.png" id="lightImg2" class="light-img">
+            <button class="lightButton" id="lightButton2">Load 2</button>
+          </div>
+          <div class="light">
+            <img src="../batteryTrainngSystem/img/lightoff.png" id="lightImg3" class="light-img">
+            <button class="lightButton" id="lightButton3">Load 3</button>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

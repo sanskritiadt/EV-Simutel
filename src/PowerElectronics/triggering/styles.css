@@ -1,0 +1,252 @@
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+b{
+    display: contents;
+}
+
+.app{
+    display: flex;
+    height: 100%;
+}
+
+.main-panel{
+    width: 75%;
+}
+
+.side-panel {
+    width: 25%;
+    background: rgb(211, 211, 211);
+    color: black;
+    border-right: 1px solid rgb(46, 46, 46);
+    padding-top: 0%;
+    padding: 15px;
+}
+
+.side-panel ul{
+    padding: 0 25px;
+}
+.side-panel ul li{
+    list-style: none;
+    margin: 20px 0;
+    background: white;
+    padding: 10px 0;
+    border: 1px solid rgb(46, 46, 46);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.side-panel ul li:hover{
+    background: #00988e;
+    color: white;
+}
+
+.side-panel ul li.active{
+    background: #00988e;
+    color: white;
+}
+
+.sub-menu ol {
+    list-style: none;
+    padding: 0 15px;
+}
+
+.sub-menu ol li {
+    padding: 5px 15px;
+    transition: 0.2s ease;
+
+}
+  
+.sub-menu li:hover{
+    text-decoration: underline;
+    color: white;
+}
+ 
+.sub-menu {
+    background: white;
+    border: 1px solid;
+    transition: 26.2s ease-in-out;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    justify-content: center;
+    display: none;
+    position: absolute;
+    top: 16vh;
+    left: 25%;
+    width: 253px;
+    color: black;
+}
+
+
+.topicContent{
+    height: 100%;
+}
+
+.contentWrapper {
+    height: 60%;
+    margin: 50px 100px;
+    font-size: 20px;
+}
+
+.topics-container{
+    margin: 30px 0;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.topics-container button{
+    color: white;
+    background: #00988e;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: help;
+    transition: 0.2s ease;
+}
+
+.topics-container button:hover{
+    background: white;
+    color: black;
+}
+
+.topics-display{
+    width: 75%;
+    margin: 45px auto;
+}
+
+.topics-display p{
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0px 30px;
+    text-align: left;
+}
+
+
+#pdfContent {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+}
+
+#exit-pdf {
+    position: relative;
+    top: 15px;
+    left: 15px;
+    width: 20px;
+    background: white;
+    padding: 8px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+#exit-pdf:hover {
+    filter: invert(1);
+    border: 2px solid white;
+}
+
+.viewPdf{
+    position: absolute;
+    bottom: 15px;
+    font-size: 14px;
+    padding: 8px 15px;
+    background: #00988e;
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: inherit;
+}
+
+#pdf-viewer {
+    width: 60%;
+    height: 90%;
+    display: flex;
+    margin: 0px auto;
+    border: 1px solid #ccc;
+    overflow-y:auto;
+    flex-direction: column;
+}
+  
+#pdf-viewer canvas {
+    display: block;
+    border: 1px solid black;
+}
+
+.actionContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 25%;
+    margin-left: 20px;
+    bottom: 15px;
+}
+
+.box{
+    display: none;
+    padding: 30px;
+    border: 1px solid #000;
+    justify-content: center;
+}
+
+.demo-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(0.3em);
+}
+
+.demo-layout h3{
+    color: rgb(255 58 58);;
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+.demo-layout button{
+    background: #fff;
+    border: 2px solid black;
+    border-radius: 8px;
+    color: black;
+    width: 200px;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.demo-layout button:hover{
+    background: black;
+    color: white;
+}
+
+.demo-layout button:hover a{
+    color: white;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NVIS7024</title>
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="../../../shared/js/chart.umd.js"></script>
+  <script src="../../../shared/js/chartjs-plugin-annotation.js"></script>
+</head>
+<body>
+  <header>
+    <div class="left-header">
+      <img id="header-logo" src="../../../shared/img/logo.png" alt="Logo">
+    </div>
+    <div id="header-title">BLDC(Brushless DC) Motor Training System</div>
+  </header>
+  <a href="../index.html"><img src="../../../shared/img/back.png" alt="back" class="back-btn"></a>
+  <div id="app">
+    <svg class="svgOverlay">
+      <circle id="neutralCircle" r="8" stroke="black" stroke-width="2" fill="black" />
+      <circle id="liveCircle" r="8" stroke="black" stroke-width="2" fill="red" />
+
+      <line class="lines" id="mainLine1"/>
+      <line class="lines" id="mainLine2"/>
+
+      <line class="lines" id="smpsLine1"/>
+      <line class="lines" id="smpsLine2"/>
+
+      <text class="svgLabels" id="main-smpsN">N</text>
+      <text class="svgLabels" id="main-smpsL">L</text>
+    </svg>
+    <div id="left-column">
+      <div class="powerSupply-box">
+        <button id="powerButton">Power</button>
+        <p>230V AC</p>
+      </div>
+      <div id="speedControl">
+        <p class="speedControlLabel">220V -> 24V SMPS</p>
+        <div class="switches">
+          <div id="direction-box">
+            <p id="switchLabel">Reverse</p>
+            <img src="img/toggle.png" id="toggle1" class="toggle1-img">
+            <p id="switchLabel">Forward</p>
+          </div>
+          <div id="switch-box">
+            <p id="switchLabel">Motoring Mode</p>
+            <img src="img/toggle.png" id="toggle" class="toggle-img">
+            <p id="switchLabel">Braking Mode</p>
+          </div>
+        </div>
+        
+        <img src="img/knob.png" id="knob" class="knob-img">
+        <div class="percetangeBox">
+          <p id="knobPercentage">0.00%</p>
+        </div>
+        <p class="speedControlLabel">Speed Control</p>
+      </div>
+    </div>
+    <div id="center-column">
+      <div id="voltage-box">
+        <p id="voltageLabel">0.00V</p>
+      </div>
+      <div id="current-box">
+        <p id="currentLabel">0.00A</p>
+      </div>
+      <img src="img/motor.png" id="motor" class="motor-img">
+    </div>
+    <div id="right-column">
+      <div id="chart-section">
+        <button id="graphSwitch">Switch Graph</button>
+        <div class="chart-container" id="pwm-chart-container1">
+          <canvas id="comparatorChart1"></canvas>
+        </div>
+        <div class="chart-container" id="pwm-chart-container2">
+          <canvas id="comparatorChart2"></canvas>
+        </div>
+        <div class="chart-container" id="pwm-chart-container3">
+          <canvas id="comparatorChart3"></canvas>
+        </div>
+        <div class="chart-container" id="voltage-chart-container">
+          <canvas id="voltageChart"></canvas>
+        </div>
+        <div class="chart-container" id="current-chart-container">
+          <canvas id="currentChart"></canvas>
+        </div>
+        <div class="chart-container" id="power-chart-container">
+          <canvas id="powerChart"></canvas>
+        </div>
+      </div>
+      <div id="load-section">
+        <div id="motor-box">
+          <img src="img/tire.png" id="tire" class="tire-img">
+          <div class="rpm-container">
+            <p id="rpm">0 RPM</p>
+          </div>
+          <p class="motorLabel">BLDC Motor</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/webtour@1.1.0/dist/webtour.min.css">
+  <script src="https://unpkg.com/webtour@1.1.0/dist/webtour.min.js"></script>
+</body>
+</html>

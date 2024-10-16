@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    user-select: none;
+}
+
+.app {
+    display: flex;
+    width: calc(100%-20px);
+    justify-content: space-around;
+    align-items: center;
+    height: calc(100%-20px);
+    margin: 20px;
+}
+
+.chart-container{
+    height: 75px;
+}
+
+.sliderWindow {
+    background: white;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px;
+}
+
+.sliderWindow span {
+    border: 1px solid black;
+    padding: 2px 0;
+    text-align: center;
+}
+
+#sliderValue {
+    width: 45px;
+}
+
+.chartWindow {
+    background: white;
+    width: 600px;
+    border: 1px solid black;
+    border-radius: 14px;
+    padding: 15px;
+    margin: 20px;
+}
+
+.circuitslider{
+    flex-direction: column;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

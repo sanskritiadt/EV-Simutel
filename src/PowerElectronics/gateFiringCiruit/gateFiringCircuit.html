@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+</head>
+<body >
+  <header>
+    <div class="left-header">
+      <img id="header-logo" src="../../shared/img/logo.png" alt="Logo">
+    </div>
+    <div id="header-title">ELECTRIC VEHICLES LEARNING LAB</div>
+  </header>
+  <a href="../../index/index.html"><img src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+  <div class="app">
+    <div class="side-panel" id="left-menu">
+      <h3 style = "text-align: center;">Gate Firing Circuits</h3>
+      <hr style="border-color: black;">
+        <ul>
+            <li class="active" onclick="componentActive(this)" id="topic1">General Firing Circuit for SCR</li>
+            <li onclick="componentActive(this)" id="topic2">Resistance Firing</li> 
+            <li onclick="componentActive(this)" id="topic3">Half-Wave R-C Firing Circuit</li>
+            <li onclick="componentActive(this)" id="topic4">Full-Wave R-C Firing Circuit</li>
+            <li onclick="componentActive(this)" id="topic5">UJT Oscillator</li>
+            <li onclick="componentActive(this)" id="topic6">Ramp Triggering</li> 
+            <li onclick="componentActive(this)" id="topic7">Ramp and Pedestal Triggering</li> 
+        </ul>
+    </div>
+
+    <div class="main-panel" id="right-menu">
+
+      <div class="topicContent" id="topic1Section">
+        <h3 style="text-align: center;">General Firing Ciruit for SCR</h3>
+        <hr>
+        <div class="topics-display">
+          <img src="../assets/img/gateFiringCircuit.PNG" alt="gateFiringCircuit" style="max-width: 70%;">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/basicFiringCircuitforSCR.pdf")'>View PDF</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic2Section" style="display: none;">
+        <h3 style="text-align: center;">Resistance Firing</h3>
+        <hr>
+        <div class="topics-display">
+          <img src="../assets/img/resistanceFiringCircuit.PNG" alt="gateFiringCircuit" style="max-width: 70%;">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/basicFiringCircuitforSCR.pdf")'>View PDF</button>   
+            <button class="viewSimulation" onclick='startSimulation("simulations/resistanceFiring/index.html")'>Simulation</button>
+          </div>
+        </div>
+      </div> 
+
+      <!-- Start from here  -->
+      <div class="topicContent" id="topic3Section" style="display: none;">
+        <h3 style="text-align: center;">Half-Wave R-C Firing Circuit</h3>
+        <hr>
+        <div class="topics-display">
+          <img src="../assets/img/HalfwaveRCFiringCircuit.png" alt="gateFiringCircuit" style="max-width: 60%;">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/halfwaveRC.pdf")'>View PDF</button>   
+            <button class="viewSimulation" onclick='startSimulation("simulations/halfWaveRCFiring/index.html")'>Simulation</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic4Section" style="display: none;">
+        <h3 style="text-align: center;">Full-Wave R-C Firing Circuit</h3>
+        <hr>
+        <div class="topics-display">
+          <img src="../assets/img/FullwaveRCFiringCircuit.png" alt="gateFiringCircuit" style="max-width: 60%;">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/FullWaveRC.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/fullWaveRCFiring/index.html")'>Simulation</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic5Section" style="display: none;">
+        <h3 style="text-align: center;">UJT Oscillator</h3>
+        <hr>
+        <div class="topics-display">
+          <img src="../assets/img/UJTOscillator.png" alt="gateFiringCircuit" style="max-width: 50%;">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/UJTOscillator.pdf")'>View PDF</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic6Section" style="display: none;">
+        <h3 style="text-align: center;">Ramp Triggering</h3>
+        <hr>
+        <div class="topics-display">
+          <img src="../assets/img/RampTriggereing.png" alt="gateFiringCircuit" style="max-width: 70%;">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/RampTriggering.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/rampTrigerring/index.html")'>Simulation</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic7Section" style="display: none;">
+        <h3 style="text-align: center;">Ramp And Pedestal Triggering</h3>
+        <hr>
+        <p style="margin: 2cap; font-size: large;">The UJT is often used as a trigger device for SCRs and TRIACs. Ramp and pedestal triggering is an improved version of synchronized UJT oscillator triggering.</p>
+        <div class="topics-display">
+          <img src="../assets/img/Ramp&Padestal.png" alt="gateFiringCircuit" style="max-width: 70%;">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/RampandPedestal.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/ramp&pesdestalTriggering/index.html")'>Simulation</button>
+          </div>
+        </div>
+      </div>
+
+      
+      <div id="pdfContent">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-pdf">
+        <div id="pdf-viewer"></div>
+      </div>
+
+      <div id="simulation-frame">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-sim">
+        <iframe id="simIframe" frameborder="0"></iframe>
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <script src="renderer.js"></script>
+</body>
+</html>

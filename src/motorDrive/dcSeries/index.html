@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EV-SIMTEL</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+</head>
+<body >
+  <header>
+    <div class="left-header">
+      <img id="header-logo" src="../../shared/img/logo.png" alt="Logo">
+    </div>
+    <div id="header-title">ELECTRIC VEHICLE LEARNING</div>
+  </header>
+  <a href="../../index/index.html"><img src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+  <div class="app">
+
+    <div class="main-panel" id="right-menu">
+      <div class="topicContent" id="topic1Section">
+        <h3 style="text-align: center;width: 100%;margin: 0;background: white;padding: 1em 0;">Three Phase Induction Motor</h3>
+        <hr style="width: 100%; margin: 0;">
+        <div class="topics-display">
+          <img src="dc-series-motors.jpg" alt="gateFiringCircuit">
+          <!-- SIMULATION under development -->
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("DCSeries.pdf")'>Theory</button>
+            <!-- <a href="simulations/index.html"><button class="viewSimulation">Simulation</button></a> -->
+          </div>
+        </div>
+      </div> 
+
+      <div class="demo-layout">
+        <a href="../../index/index.html"><img style="position: absolute; left: 20px; top: 5px; width: 20px; height: 20px; border-radius: 50%;" src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+        <h3>Buy full version to unlock all the content & features</h3>
+        <button><a href="https://www.nvistech.com/contact-us-experiential-learning/" target="_blank">Contact @ NVIS Technologies Pvt. Ltd</a></button> 
+      </div>
+
+      <div id="pdfContent">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-pdf">
+        <div id="pdf-viewer"></div>
+      </div>
+
+      <div id="simulation-frame">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-sim">
+        <iframe id="simIframe" frameborder="0"></iframe>
+      </div>
+      
+    </div>
+  </div>
+  
+  <script src="renderer.js"></script>
+</body>
+</html>

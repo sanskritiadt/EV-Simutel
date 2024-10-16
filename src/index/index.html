@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="showSubItems('subItem1', 'item1')">
+  <header>
+    <div class="left-header">
+      <img id="header-logo" src="../shared/img/logo.png" alt="Logo">
+    </div>
+    <div id="header-title">ELECTRIC VEHICLES LEARNING</div>
+  </header>
+  <a href="../home.html"><img src="../shared/img/back.png" alt="back" class="back-btn"></a>
+  <div class="app">
+    <div class="menu-column" id="left-menu">
+      <h3 id="center-toc">Table of contents</h3>
+      <hr>
+      <ul style="padding: 0; display: flex; gap: 10px;">
+        <div class="menuItemContainer">
+          <span class="menuItem" id="item1" onclick="showSubItems('subItem1', 'item1')">Power Electronics</span>
+          <div id="subItem1" class="sub-menu">
+            <ol>
+              <a href="../PowerElectronics/introduction/introduction.html"><li>Introduction</li></a>
+              <a href="../PowerElectronics/triggering/triggering.html"><li>Triggering and Commutation</li></a>
+              <a href="../PowerElectronics/gateFiringCiruit/gateFiringCircuit.html"><li>Gate Firing Circuits</li></a>
+              <a href="../PowerElectronics/phasecontrolRectifier/phasecontrolRectifier.html"><li>Phase Controlled Rectifier</li></a>
+              <a href="../PowerElectronics/Inverter/inverter.html"><li>Inverter</li></a>
+              <a href="../PowerElectronics/Chopper/chopper.html"><li>Chopper</li></a>
+              <a href="../PowerElectronics/cycloConverter/cyclo.html"><li>Cyclo Converter</li></a>
+              <a href="../PowerElectronics/ACvoltageController/ACvoltagecontrol.html"><li>AC Voltage Controller</li></a>          
+            </ol>
+          </div>
+        </div>
+        
+        <div class="menuItemContainer">
+          <span class="menuItem" id="item2" onclick="showSubItems('subItem2', 'item2')">Motor Drives</span>
+          <div id="subItem2" class="sub-menu">
+            <ol>
+              <a href="../motorDrive/PMSM/index.html"><li>PMSM Motor</li></a>
+              <a href="../motorDrive/PMDC/index.html"><li>PMDC Motor</li></a>
+              <a href="../motorDrive/BLDC/index.html"><li>BLDC Motor</li></a>
+              <a href="../motorDrive/threePhase/index.html"><li>Three Phase Induction Motor</li></a>
+              <a href="../motorDrive/dcSeries/index.html"><li>DC Series Machine Lab</li></a>
+              <a href="../motorDrive/SRM/index.html"><li>SRM</li></a>
+            </ol>
+          </div>
+        </div>
+        
+        <div class="menuItemContainer">
+          <span class="menuItem" id="item3" onclick="showSubItems('subItem3', 'item3')">General Concepts of EV</span>
+          <div id="subItem3" class="sub-menu">
+            <ol>
+              <a href="../genConcepts/BMS/index.html"><li>Battery Management Training System</li></a>
+              <a href="../genConcepts/fourQuadrant/index.html"><li>Four Quadrant Regenerative Charging</li></a>
+              <a href="../genConcepts/regenerativeChargingBraking/index.html"><li>Regenerative Charging and Braking Training System</li></a>
+              <a href="../genConcepts/CAN/index.html"> <li>CAN</li></a>
+            </ol>
+          </div>
+        </div>
+
+        <div class="menuItemContainer">
+          <span class="menuItem" id="item4" onclick="showSubItems('subItem4', 'item4')">Battery Management Systems</span>
+          <div id="subItem4" class="sub-menu">
+            <ol>
+              <a href="../BMS/bmsTheory/index.html"><li>Theory of Battery Charging Characteristics</li></a>
+              <a href="../BMS/batteryTrainngSystem/lead-acid.html"><li>Lead-Acid Battery Characteristics</li></a>
+              <a href="../BMS/batteryTrainngSystem/lithium-ion.html"><li>Lithium-Ion Battery Characteristics</li></a>
+              <a href="../BMS/batteryTrainngSystem/lithium-iron-phosphate.html"><li>Lithium Iron Phosphate Battery Characteristics</li></a>
+              <a href="../BMS/batteryTrainngSystem/lithium-polymer.html"><li>Lithium Polymer Battery Characteristics</li></a>
+              <a href="../BMS/chargingLevels/index.html"><li>Level-1 Level-2 Level-3 Charger</li></a>
+            </ol>
+          </div>
+        </div>
+      </ul> 
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

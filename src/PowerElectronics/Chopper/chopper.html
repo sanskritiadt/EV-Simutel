@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+</head>
+<body >
+  <header>
+    <div class="left-header">
+      <img id="header-logo" src="../../shared/img/logo.png" alt="Logo">
+    </div>
+    <div id="header-title">ELECTRIC VEHICLES LEARNING LAB</div>
+  </header>
+  <a href="../../index/index.html"><img src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+  <div class="app">
+    <div class="side-panel" id="left-menu">
+      <h3 style = "text-align: center;">Chopper</h3>
+      <hr style="border-color: black;">
+        <ul>
+            <li class="active" onclick="componentActive(this)" id="topic1">Introduction</li>
+            <li onclick="componentActive(this)" id="topic2">Classification</li>
+            <li onclick="componentActive(this)" id="topic3">DC Chopper Firing Scheme</li>
+            <li onclick="componentActive(this)" id="topic4">Step Down Chopper</li>
+            <li onclick="componentActive(this)" id="topic5">Step Up Chopper</li>
+            <li onclick="componentActive(this)" id="topic6">AC Chopper Firing Scheme</li>
+            <li onclick="componentActive(this)" id="topic7">AC Chopper</li> 
+            <li onclick="componentActive(this)" id="topic8">Applications</li>
+        </ul>
+    </div>
+    <div class="main-panel" id="right-menu">
+      
+
+      <div class="topicContent" id="topic1Section">
+        <h3 style="text-align: center;">Introduction to Chopper</h3>
+        <hr>
+        <div class=" contentWrapper">
+          <p>A chopper converts fixed DC input voltage to a variable DC output voltage.</p>
+          <p><b> Chopper are two types:</b></p>
+          <p><b>(1) DC Chopper: </b> A DC chopper is a simply an 'on-off' switch that converts fixed DC input voltage to a variable DC output voltage.</p>
+          <p><b>(2) AC Chopper: </b> A AC chopper is a simply an 'on-off' switch that converts fixed AC input voltage to a variable AC output voltage.</p>
+          <img src="../assets/img/IntroChopper.png" alt="Chopper">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/Chopper_introduction.pdf")'>View PDF</button> 
+          </div>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic2Section" style="display: none;">
+        <h3 style="text-align: center;">Classification of Chopper</h3>
+        <hr>
+        <p style="color: red; text-align: center; font-weight: normal;">Too see the details, move the mover over the labels/button</p>
+        <div class="topics-container" style="margin: 10px 0;">
+          <button onmouseover="showContent(0)">DC Chopper</button>
+          <button onmouseover="showContent(1)">AC Chopper</button>
+        </div>
+        <h3 style="margin: 0; padding-left: 20px;">Types of DC Chopper: </h3>
+        <div class="topics-container" >
+          <button onmouseover="showContent(2)">Step Down Chopper</button>
+          <button onmouseover="showContent(3)">Step Up Chopper</button>
+        </div>
+        <div class="topics-display contentWrapper">
+          <p style="display: none;"><b style="color: blue;">DC Chopper : </b>A DC chopper is a static device that converts fixed DC input voltage to a variable DC output voltage. The chopper is simply DC to DC converter. A Chopper is simply an 'on-off switch that either connects load to the supply or disconnects load from the supply and produces a chopped load voltage from a constant input supply.</p>
+          <p><b style="color: blue;">AC Chopper: </b>The AC voltage magnitude can be changed by two methods.The well-known first method is by means of step-up and The step-down transformers. In this method, change in voltage depends on the value of transformation ratio of the transformer. The second method of changing magnitude of an AC voltage is by means of a solid-state switch. In this method, the AC input voltage is switched on and off periodically by means of suitable switch. Voltage changing circuits employing semiconductor devices as a static switch are known as AC Choppers.</p>
+          <p style="display: none;"><b style="color: blue;">Step Down Chopper : </b>A Chopper is simply an 'on-off' switch that either connects load to the supply or disconnects load from the supply at a fast speed and produces a chopped load voltage from a constant input supply.. In Step Down chopper the average output voltage VO is less than the input voltage VS. Thus load voltage can be controlled by varying duty cycle.</p>
+          <p style="display: none;"><b style="color: blue;">Step Up Chopper: </b>A Chopper is simply an 'on-off' switch that either connects load to the supply or disconnects load from the supply at a fast speed and produces a chopped load voltage from a constant input supply. In Step Up chopper the average output voltage VO is greater than the input voltage VS. Thus load voltage can be controlled by varying duty cycle.</p>
+        </div>
+      </div>
+      
+
+      <div class="topicContent" id="topic3Section" style="display: none;">
+        <h3 style="text-align: center;">DC Chopper Firing Scheme</h3>
+        <hr>
+        <div class=" contentWrapper" style="display: flex; flex-direction: column;">
+          <img src="../assets/img/DC_Chopper_FS.png" alt="Chopper">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/DC_Chopper_FS.pdf")'>View PDF</button> 
+            <button class="viewSimulation" onclick='startSimulation("simulations/DCChopper/index.html")'>Simulation</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="topicContent" id="topic4Section" style="display: none;">
+        <h3 style="text-align: center;">Step-Down Chopper</h3>
+        <hr>
+        <div class=" contentWrapper" style="display: flex; flex-direction: column;" >
+          <p>A Chopper is simply an 'on-off' switch that either connects load to the supply or disconnects load from the supply and produces a chopped load voltage from a constant input supply. During the period Ton, when the chopper is on, the supply terminals are connected to the load terminals & during the period Toff, when the chopper is 'Off", the load current flows through the Freewheeling Diode DF.</p>
+          <img src="../assets/img/Step_Down_Chopper.png" alt="Step-Down Chopper" style="height: 70%;">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/Step_Down_Chopper.pdf")'>View PDF</button> 
+            <button class="viewSimulation" onclick='startSimulation("simulations/stepDownChopper/index.html")'>Simulation</button>
+            <button class="viewnumerical" onclick='startSimulation("numericals/stepdown/index.html")'>Numerical</button>  
+          </div>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic5Section" style="display: none;">
+        <h3 style="text-align: center;">Step-Up Chopper</h3>
+        <hr>
+        <div class=" contentWrapper">
+          <p>The chopper configuration of figure is capable of giving a maximum voltage that is slightly smaller than the input DC voltage (i.e, E0 < Edc ). Therefore, the chopper configuration is called as Step-Up Chopper. However, the chopper can also be used to produce higher voltage at the load than the input voltage (i.e, E0 > Edc ) This is called as Step-Up Chopper</p>
+          <img src="../assets/img/Step_UP_Chopper.png" alt="Step-Up Chopper" style="height: 70%;">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/Step-Up_Chopper.pdf")'>View PDF</button> 
+            <button class="viewSimulation" onclick='startSimulation("simulations/stepUpChopper/index.html")'>Simulation</button>
+            <button class="viewnumerical" onclick='startSimulation("numericals/stepup/index.html")'>Numerical</button> 
+          </div>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic6Section" style="display: none;">
+        <h3 style="text-align: center;">AC Chopper Firing Scheme</h3>
+        <hr>
+        <div class=" contentWrapper">
+          <img src="../assets/img/AC_Chop_FS.png" alt="Step-Up Chopper">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/AC_Chop_FS.pdf")'>View PDF</button> 
+            <button class="viewSimulation" onclick='startSimulation("simulations/ACChopper/index.html")'>Simulation</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="topicContent" id="topic7Section" style="display: none;">
+        <h3 style="text-align: center;">AC Chopper Firing Scheme</h3>
+        <hr>
+        <div class=" contentWrapper">
+          <img src="../assets/img/AC_Chopper.png" alt="Step-Up Chopper" style="height: 100%;">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/AC_Chopper.pdf")'>View PDF</button> 
+            <button class="viewSimulation" onclick='startSimulation("simulations/ACChopper2/index.html")'>Simulation</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic8Section" style="display: none;">
+        <h2 style="text-align: center;">Applications</h2>
+        <hr style="width: 100%; margin: 0;">
+        <div class="contentWrapper">
+          <b><ol style="height: 100%;">
+            <li>Speed control of DC motor.</li>
+            <li> Subway cars.</li>
+            <li>Trolley Trucks.</li>
+            <li>Battary operated vehicles.</li>
+            <li>DC Drives.</li>
+          </ol></b>
+        </div>
+      </div>
+
+      <div class="demo-layout">
+        <a href="../../index/index.html"><img style="position: absolute; left: 20px; top: 5px; width: 20px; height: 20px; border-radius: 50%;" src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+        <h3>Buy full version to unlock all the content & features</h3>
+        <button><a href="https://www.nvistech.com/contact-us-experiential-learning/" target="_blank">Contact @ NVIS Technologies Pvt. Ltd</a></button> 
+      </div>
+
+      
+      <div id="pdfContent">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-pdf">
+        <div id="pdf-viewer"></div>
+      </div>
+
+      <div id="simulation-frame">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-sim">
+        <iframe id="simIframe" frameborder="0"></iframe>
+      </div>
+
+    </div>
+  </div>
+  
+  <script src="renderer.js"></script>
+</body>
+</html>

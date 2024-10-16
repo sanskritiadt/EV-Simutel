@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+</head>
+<body >
+  <header>
+    <div class="left-header">
+      <img id="header-logo" src="../../shared/img/logo.png" alt="Logo">
+    </div>
+    <div id="header-title">ELECTRIC VEHICLE LEARNING</div>
+  </header>
+  <a href="../../index/index.html"><img src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+  <div class="app">
+
+    <div class="main-panel" id="right-menu">
+      <div class="topicContent" id="topic1Section">
+        <h3 style="text-align: center;width: 100%;margin: 0;background: white;padding: 1em 0;">Permanent Magnet Synchronous Motor</h3>
+        <hr style="width: 100%; margin: 0;">
+        <div class="topics-display">
+            <img src="img/PMSM_motor_gif.gif" alt="gateFiringCircuit" style=" height: 60%;">
+            <div class="theory-window">
+                <h2>Introduction</h2>
+                <p>In an electrical system, synchronous motors are the most widely used steady-state 3-phase AC motors, which convert electrical energy into mechanical energy. This type of motor operates at synchronous speed, which is constant and it is synchronous with the supply frequency and the period of rotation is equal to the integral no. of AC cycles. That means the speed of the motor is equal to the rotating magnetic field. This type of motor mainly used in power systems to improve the power factor. There are non-excited and DC excited synchronous motors, which operate according to the magnetic power of the motor. Reluctance motors, hysteresis motors, and permanent magnet motors are the non-excited synchronous motors. </p>
+                <p>A <b>permanent magnet synchronous motor (PMSM)</b> - is a synchronous electric motor whose inductor consists of permanent magnets.</p>
+                <img src="img/PMSM.png" style="max-width: 80%;">
+                <p>The permanent magnet synchronous motors are one of the types of AC synchronous motors, where the field is excited by permanent magnets that generate sinusoidal back EMF. It contains a rotor and stator same as that of an induction motor, but a permanent magnet is used as a rotor to create a magnetic field. Hence there is no need to wound field winding on the rotor. It is also known as a 3-phase brushless permanent sine wave motor. <br><br>The permanent magnet synchronous motor diagram is shown below.</p>
+                <img src="img/Permanent-Magnet-Synchronous-Motor.png" style="max-width: 80%;">
+                <p>The permanent magnet synchronous motors are very efficient, brushless, very fast, safe, and give high dynamic performance when compared to the conventional motors. It produces smooth torque, low noise and mainly used for high-speed applications like robotics. It is a 3-phase AC synchronous motor that runs at synchronous speed with the applied AC source.<br>Instead of using winding for the rotor, permanent magnets are mounted to create a rotating magnetic field. As there is no supply of DC source, these types of motors are very simple and less cost. It contains a stator with 3 windings installed on it and a rotor with a permanent magnet mounted to create field poles. The 3-phase input ac supply is given to the stator to start working.</p>
+                <h4>Construction of Permanent magnet synchronous motor </h4>
+                <p>A permanent magnet synchronous motor, like any rotating electric motor, consists of a rotor and a stator. The stator is the fixed part. The rotor is the rotating part.</p>
+                <img src="img/Permanent-magnet-synchronous-motor-rotor.png" style="max-width: 80%;">
+                <p>Typically, the rotor is located inside the stator of the electric motor, there are also structures with an external rotor - inside out electric motors</p>
+                <img src="img/external-rotor-inside-out-electric-motors.png" style="max-width: 80%;">
+                <p>The rotor consists of permanent magnets. Materials with high coercive force are used as permanent magnets.<br>According to the rotor design, synchronous motors are divided into:</p>
+                <ul>
+                  <li>Electric motors with salient pole rotor;</li>
+                  <li>Electric motors with non-salient pole rotor.</li>
+                </ul>
+                <p>An electric motor with non-salient pole rotor has an equal direct and quadrature inductances L<sub>d</sub> = L<sub>q</sub>, whereas for an electric motor with salient pole rotor the quadrature inductance is not equal to the direct L<sub>q</sub> ≠ L<sub>d</sub>.</p>
+                <img src="img/Electric-motors-with-salient-and-non-salient-pole-rotor.png" style="max-width: 80%;">
+                <h4>Working principle of a synchronous motor</h4>
+                <p>The principle of operation of a synchronous motor is based on the interaction of the rotating magnetic field of the stator and the constant magnetic field of the rotor. The concept of the rotating magnetic field of the stator of a synchronous motor is the same as that of a three-phase induction motor.<br>The magnetic field of the rotor, interacting with the synchronous alternating current of the stator windings, according to the Ampere's Law, creates torque, forcing the rotor to rotate.<br>Permanent magnets located on the rotor of the PMSM create a constant magnetic field. At a synchronous speed of rotation of the rotor with the stator field, the rotor poles interlock with the rotating magnetic field of the stator. In this regard, the PMSM cannot start itself when it is connected directly to the three-phase current network (current frequency in the power grid 50Hz).</p>
+                <h4>Advantages</h4>
+                <p>The advantages of permanent magnet synchronous motor include,</p>
+                <ul>
+                  <li>provides higher efficiency at high speeds</li>
+                  <li>available in small sizes at different packages</li>
+                  <li>maintenance and installation is very easy than an induction motor</li>
+                  <li>Capable of maintaining full torque at low speeds.</li>
+                  <li>high efficiency and reliability</li>
+                  <li>gives smooth torque and dynamic performance</li>
+                </ul>
+                <h4>Disadvantage</h4>
+                <p>The disadvantages of permanent magnet synchronous motors are,</p>
+                <ul>
+                  <li>These type of motors are very expensive when compared to induction motors</li>
+                  <li>Somehow difficult to start-up because they are not self-starting motors.</li>
+                </ul>
+                <h4>Applications</h4>
+                <p>The permanent magnet synchronous motors applications are,</p>
+                <ul>
+                  <li>Air conditioners</li>
+                  <li>Refrigerators</li>
+                  <li>AC compressors</li>
+                  <li>Washing machines, which are direct-drive</li>
+                  <li>Automotive electrical power steering</li>
+                  <li>Machine tools</li>
+                  <li>Large power systems to improve leading, and lagging power factor</li>
+                  <li>Control of traction</li>
+                  <li>Data storage units.</li>
+                  <li>Servo drives</li>
+                  <li>Industrial applications like robotics, aerospace, and many more.</li>
+                </ul>
+            </div>
+
+            <!-- --------------- COPY FROM HERE --------------- -->
+            <div class="demo-layout">
+              <a href="../../index/index.html"><img style="position: absolute; left: 20px; top: 5px; width: 20px; height: 20px; border-radius: 50%;" src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+              <h3>Buy full version to unlock all the content & features</h3>
+              <button><a href="https://www.nvistech.com/contact-us-experiential-learning/" target="_blank">Contact @ NVIS Technologies Pvt. Ltd</a></button> 
+            </div>
+
+            
+          <!-- SIMULATION under development -->
+          <!-- <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/basicFiringCircuitforSCR.pdf")'>Theory</button>   
+            <button class="viewSimulation" onclick='startSimulation("simulations/resistanceFiring/index.html")'>Simulation</button>
+          </div> -->
+        </div>
+      </div> 
+      
+      <div id="pdfContent">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-pdf">
+        <div id="pdf-viewer"></div>
+      </div>
+
+      <div id="simulation-frame">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-sim">
+        <iframe id="simIframe" frameborder="0"></iframe>
+      </div>
+      
+    </div>
+  </div>
+  
+  <script src="renderer.js"></script>
+</body>
+</html>

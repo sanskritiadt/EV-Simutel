@@ -1,0 +1,382 @@
+.svgOverlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+.lines {
+  stroke-width: 2;
+  stroke: #000;
+  
+}
+
+
+.svgLabels{
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#app {
+  display: flex;
+  flex: 1; /* Take up remaining height */
+  overflow: hidden;
+  background: #c9c9c9;
+}
+
+#left-column {
+  background: white;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 12px;
+  height: 150px;
+  margin: 100px 0 10px 10px;
+  width: 200px;
+  z-index: 1;
+}
+
+#smpsLabel {
+  font-size: 16px;
+  font-weight: bold;
+  width: 150px;
+  text-align: center;
+  margin: 0;
+}
+
+#center-column {
+  flex: 2;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  margin: 10px;
+  height: 100%;
+  align-items: center;
+  z-index: 1;
+}
+
+
+#center-column span p{
+  text-align: center;
+  font-weight: bold;
+}
+
+#batteryLabel {
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 12px;
+  width: 50%;
+  margin: 35px 0;
+}
+
+#parametersLabel {
+  display: flex;
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 12px;
+  width: 50%;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+#parametersLabel p {
+  width: 60%;
+  align-items: center;
+}
+
+#right-column {
+  flex: 2;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  height: 82.5vh;
+  margin: 10px 10px 10px 0;
+  width: 420px;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+#powerButton {
+  font-size: 18px;
+  padding: 10px 20px;
+  background: white;
+  border: 2px solid red;
+  color: red;
+  cursor: pointer;
+  box-shadow: -5px 5px 10px black;
+}
+
+#batteryStat {
+  text-align: left;
+}
+
+#batteryStat b{
+  font-weight: bold !important;
+}
+
+#battery-parameters h2, #right-column h2{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+#battery-parameters {
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 12px;
+}
+
+#parameters-stats {
+  display: flex;
+  justify-content: space-between; /* Border that divides battery section from meters/chart */
+}
+
+.battery{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.batteryHead {
+  width: 5px;
+  height: 20px;
+  border-radius: 0 4px 4px 0;
+  background: #000;
+}
+
+
+#battery-container {
+  width: 95%;
+  height: 30px;
+  border: 2px solid #000;
+  margin: 15px 0;
+}
+
+#progressBar {
+  width: 0%;
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.5s ease-out;
+}
+
+#meters {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+.lightButton {
+  background: #fff;
+  font-size: 16px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.lightButton.active {
+  background-color: #ffd700;
+}
+
+.light-img {
+  margin-left: 15px;
+  width: 50px; /* Or the width that fits your layout */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* To place it above the button */
+  margin-bottom: 10px; /* Space between the image and button */
+}
+
+.light {
+  text-align: center; /* Center-align the light images and buttons */
+  margin: 5px 25px; /* Provide some spacing between items */
+}
+#stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin-bottom: 10px;
+  flex: 1;
+  padding: 10px;
+  padding-left: 40px;
+}
+
+#stats p {
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+#chart-container {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+  padding-right: 20px;
+  flex: 2;
+}
+#voltage-chart{
+  height: 200px;
+}
+#battery-progress h2 {
+  margin-top: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+#meters-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* Aligns items vertically */
+  /* align-self: stretch; */
+  border: 2px solid black;
+  border-radius: 12px;
+  background-color: white;
+}
+
+/* Define styles for the blurred effect */
+.blurred {
+  filter: blur(5px); /* Adjust the blur amount as needed */
+}
+
+/* Define styles for the highlighted section */
+.highlighted {
+  filter: none; /* Remove any blur effect */
+}
+
+#voltmeter, #ammeter {
+  width: 210px;
+  height: 210px;
+}
+
+.startTour{
+  position: absolute;
+  left: 15px;
+  top: 50px;
+  font-size: 14px;
+  padding: 8px 15px;
+  background: #00988e;
+  color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.nextButton{
+  position: absolute;
+  left: 150px;
+  top: 50px;
+  font-size: 14px;
+  padding: 8px 15px;
+  background: #00988e;
+  color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.endTourButton{
+  position: absolute;
+  left: 250px;
+  top: 50px;
+  font-size: 14px;
+  padding: 8px 15px;
+  background: #00988e;
+  color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+
+
+
+
+#meters-container p{
+  text-align: center;
+  margin-top: -50px;
+  font-weight: bold;
+}
+
+
+#load-section{
+  background-color: white;
+  border-radius: 12px;
+  margin-top: 12px;
+  height: 225px;
+  border: 2px solid #000;
+}
+.lights {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#app > div {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.demo-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(0.3em);
+  z-index: 2;
+}
+  
+.demo-layout h3{
+  color: rgb(255 58 58);;
+  font-size: 35px;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+  
+.demo-layout button{
+  background: #fff;
+  border: 2px solid black;
+  border-radius: 8px;
+  color: black;
+  width: 200px;
+  padding: 15px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+  
+.demo-layout button:hover{
+  background: black;
+  color: white;
+}
+
+.demo-layout button:hover a{
+  color: white;
+}
+
+.demo-layout button a{
+  color: black;
+}

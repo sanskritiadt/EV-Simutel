@@ -1,0 +1,104 @@
+
+#left-menu{
+  width: 80%;
+  background: white;
+  margin: 25px;
+  border: 2px solid black;
+  border-radius: 14px;
+  padding: 15px;
+  padding-top: 0;
+}
+
+#center-toc{
+  text-align: center;
+}
+
+#left-menu h3{
+  text-align: center;
+}
+
+#left-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#left-menu ol {
+  margin: 0;
+}
+
+.menuItemContainer {
+  width: 100%;
+}
+
+.menuItem {
+  background: #00988e;
+  color: white;
+  display: block;
+  margin: 20px 0;
+  margin-bottom: 0;
+  padding: 10px 15px;
+  border: 2px solid black;
+  border-radius: 8px;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menuItem:hover, .menuItem.active {
+  background: #00988e;
+  color: white;
+}
+
+.menuItem.active {
+  margin-bottom: 0;
+}
+
+
+.sub-menu ol{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sub-menu a{
+  text-decoration: none;
+  color: black;
+  transition: 0.2s ease;
+}
+
+.sub-menu a:hover {
+  text-decoration: underline;
+  
+}
+
+.sub-menu li {
+  padding: 5px 15px;
+  transition: 0.2s ease;
+}
+
+.sub-menu li:hover{
+  text-decoration: underline;
+}
+
+.sub-menu {
+  /* display: none; */
+  background: #00988e;
+  transition: 0.2s ease-in-out;
+  border: 2px solid black;
+  border-top: 0px;
+  margin: 0 20px;
+  padding: 10px 0;
+  border-radius: 0 0 20px 20px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.app {
+  display: flex;
+  flex: 1; /* Take up remaining height */
+  overflow: hidden;
+  background: #c9c9c9;
+  justify-content: space-evenly;
+}

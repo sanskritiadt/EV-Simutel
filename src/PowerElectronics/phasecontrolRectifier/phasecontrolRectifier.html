@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+</head>
+<body >
+  <header>
+    <div class="left-header">
+      <img id="header-logo" src="../../shared/img/logo.png" alt="Logo">
+    </div>
+    <div id="header-title">ELECTRIC VEHICLES LEARNING LAB</div>
+  </header>
+  <a href="../../index/index.html"><img src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+  <div class="app">
+    <div class="side-panel" id="left-menu">
+      <h3 style = "text-align: center;">Phase Controlled Rectifier</h3>
+      <hr style="border-color: black;">
+        <ul>
+            <li class="active" onclick="componentActive(this)" id="topic1">Introduction</li>
+            <li id="subItem" style="margin-bottom: 0;">Classification
+              <div id="subItemSection" class="sub-menu" onmouseleave="hideSubmenu()">
+                <ol>
+                  <li id="topic2" onclick="componentActive(this)">Uncontrolled</li>
+                  <li id="topic3" onclick="componentActive(this)">Controlled</li>
+                </ol>
+              </div>
+            </li>
+            <li onclick="componentActive(this)" id="topic4">Uncontrolled Rectifier</li>
+            <li onclick="componentActive(this)" id="topic5">Firing Scheme</li>
+            <li onclick="componentActive(this)" id="topic6">Controlled Rectifier</li>
+            <li onclick="componentActive(this)" id="topic7">Application</li> 
+        </ul>
+    </div>
+    <div class="main-panel" id="right-menu">
+      
+
+      <div class="topicContent" id="topic1Section">
+        <h3 style="text-align: center;">Introduction to Rectifier</h3>
+        <hr>
+        <div class=" contentWrapper">
+          <p style="margin-bottom: -13.5px;">Rectifier is converting an alternating current or voltage into a direct current or voltage.</p>
+          <p style="margin-bottom: -13.5px;"><b> Rectifiers are of two types:</b></p>
+          <p style="margin-bottom: -13.5px;"><b>(1) Uncontrolled Rectifier(Diode Rectifier):</b> It uses only diodes and the DC output voltage is fixed.</p>
+          <p><b>(2)Controlled Rectifier (Thyristorized Rectifier):</b> It uses SCRs and DC output voltage is variable in amplitude. By controlling the firing angle the output DC voltage (after conversion) can be varied.</p>
+          <img src="../assets/img/RectifierSystem.png" alt="Rectifier" style="max-width: 80%;">
+          <div class="actionContainer">
+              <button class="viewPdf" onclick='loadPdf("../assets/IntroductionOfRectifier.pdf")'>View PDF</button> 
+          </div>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic2Section" style="display: none;">
+        <h3 style="text-align: center;">Uncontrolled Rectifier</h3>
+        <hr>
+        <p style="color: red; text-align: center; font-weight: normal;">Too see the details, move the mover over the labels/button</p>
+        <div class="topics-container" style="margin: 10px 0;">
+          <button onmouseover="showContent(0)">Half-Wave Rectifier</button>
+          <button onmouseover="showContent(1)">Full-Wave Rectifier</button>
+          <button onmouseover="showContent(2)">Bridge Rectifier</button>
+        </div>
+        <div class="topics-display contentWrapper" >
+          <p class="box" ><b style="color: blue;">Half Wave Rectifier: </b> Half wave rectifier converts only half cycle of the input AC voltage to DC output voltage and block other half cycle.</p>
+          <p class="box"><b style="color: blue;">Full Wave Rectifier : </b>Full-wave rectifier converts both half cycle of the input AC voltage to tapped transformer. DC output voltage by the use of center.</p>
+          <p class="box"><b style="color: blue;">Bridge Rectifier: </b>Bridge rectifier is type of full wave rectifier that converts both half cycle of the input AC voltage to DC output voltage. Bridge transformer. rectifier does not need center tapped.</p>
+        </div>
+      </div>
+      
+
+      <!-- Start from here  -->
+      <div class="topicContent" id="topic3Section" style="display: none;">
+        <h3 style="text-align: center;">Controlled Rectifier</h3>
+        <hr>
+        <p style="color: red; text-align: center; font-weight: normal;">Too see the details, move the mover over the labels/button</p>
+        <div class="topics-container" style="margin: 10px 0;">
+          <button onmouseover="showContent(0)">Half-Wave Rectifier</button>
+          <button onmouseover="showContent(1)">Full-Wave Rectifier</button>
+          <button onmouseover="showContent(2)">Semi Converter</button>
+          <button onmouseover="showContent(3)">Bridge Rectifier</button>
+        </div>
+        <h3 style="margin: 0; padding-left: 20px;">Types of Semi Converter: </h3>
+        <div class="topics-container" >
+          <button onmouseover="showContent(4)">Asymmetrical Configuration</button>
+          <button onmouseover="showContent(5)">Symmetrical Configuration</button>
+        </div>
+        <div class="topics-display contentWrapper">
+          <p class="box"><b style="color: blue;">Half Wave Rectifier: </b>Half wave rectifier converts only half cycle of the input AC voltage to DC output voltage and block other half cycle .By controlling the firing angle the output DC voltage can be varied.</p>
+          <p class="box"><b style="color: blue;">Full Wave Rectifier: </b>Full-wave rectifier converts both half cycle of the input AC voltage to DC output voltage by the use of center tapped transformer. By controlling the firing angle the output DC voltage can be varied.</p>
+          <p class="box"><b style="color: blue;">Semi-Converter: </b>Semiconverter is a type of Bridge rectifier in this configuration two SCR are replaced by two diode and can be connected in either arm of the bridge. By controlling the firing angle the output DC voltage can be varied.</p>
+          <p class="box"><b style="color: blue;">Bridge Rectifier: </b>Bridge rectifier is type of full wave rectifier that converts both half cycle of the input AC voltage to DC output voltage. Bridge rectifier does not need center tapped transformer. By controlling the firing angle the output DC voltage can be varied.</p>
+          <p class="box"><b style="color: blue;">Asymmetrical : </b>In a asymmetrical configuration the cathode of one SCR and a cathode of one diode are at the same potential.</p>
+          <p class="box"><b style="color: blue;">Symmetrical : </b>In a symmetrical configuration the cathode of two SCRs are at the same potential so their gates can be connected and single gate pulse can be used for triggering either SCR.</p>
+        </div>
+      </div>
+
+
+      <div class="topicContent" id="topic4Section" style="display: none;">
+        <h3 style="text-align: center;">Uncontrolled Rectifier</h3>
+        <hr>
+        <p style="color: red; text-align: center; font-weight: normal;">Too see the details, move the mover over the labels/button</p>
+        <div class="topics-container" style="margin: 10px 0;">
+          <button onmouseover="showContent(0)">Half-Wave Rectifier</button>
+          <button onmouseover="showContent(1)">Full-Wave Rectifier</button>
+          <button onmouseover="showContent(2)">Bridge Rectifier</button>
+        </div>
+        <div class="topics-display contentWrapper">
+          <p style="display: none; flex-direction: column;"><img src="../assets/img/Unc_HalfwaveRect.png" alt="Half Wave Rectifier"></p>
+          <p style="display: none; flex-direction: column"><img src="../assets/img/UncFullWaveRect.png" alt="gateFiringCircuit"></p>
+          <p style="display: none; flex-direction: column"><img src="../assets/img/UncBridgeRect.png" alt="gateFiringCircuit"></p>
+          <div class="actionContainer" style="display: none;">
+         <!-- changes  -->
+            <button class="viewPdf" onclick='loadPdf("../assets/Un_HalfWaveRectifier.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/uncontrolled_half/index.html")'>Simulation</button>
+            <!-- change -->
+          </div>
+          <div class="actionContainer" style="display: none;">
+            <!-- changes -->
+            <button class="viewPdf" onclick='loadPdf("../assets/Un_FullWaveRectifier.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/uncontrolled_full/index.html")'>Simulation</button>
+         
+            <!-- chnages -->
+          </div>
+          <div class="actionContainer" style="display: none;">
+            <!-- changes -->
+            <button class="viewPdf" onclick='loadPdf("../assets/Un_BridgeRectifier.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/uncontrolled_bridge/index.html")'>Simulation</button>
+            <!-- changes -->
+          </div>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic5Section">
+        <h3 style="text-align: center;">Firing Scheme</h3>
+        <hr>
+        <p style="color: red; text-align: center; font-weight: normal;">Too see the details, move the mover over the labels/button</p>
+          <div class="topics-container" style="margin: 10px 0;">
+            <button onmouseover="showContent(0)">Triangular Comparator</button>
+            <button onmouseover="showContent(1)">Ramp Comparator</button>
+            <button onmouseover="showContent(2)">Cosine Firing Scheme</button>
+            <button onmouseover="showContent(3)">IC-TCA 785</button>
+          </div>
+          <div class="topics-display contentWrapper">
+            <p style="display: none; flex-direction: column"><img src="../assets/img/FS_Tria_Compa.png" alt="Half Wave Rectifier"></p>
+            <p style="display: none; flex-direction: column"><img src="../assets/img/FS_RampComp.png" alt="gateFiringCircuit"></p>
+            <p style="display: none; flex-direction: column">
+              <span>This scheme used to fire thyristors in single phase converter. The pulse output of this scheme synchronizes with AC supply using step down transformer supply voltage step down to an appropriate level.</span>
+              <img src="../assets/img/FS_Cosine.png" alt="gateFiringCircuit" height="400">
+              </p>
+            <p style="display: none; flex-direction: column"><img src="../assets/img/FSICTCA785.png" alt="gateFiringCircuit"></p>
+            
+            <div class="actionContainer" style="display: none;">
+              <button class="viewPdf" onclick='loadPdf("../assets/Triangular_firing_scheme.pdf")'>View PDF</button>
+              <button class="viewSimulation" onclick='startSimulation("simulations/Triangular_comparator/index.html")'>Simulation</button>
+            </div>
+            <div class="actionContainer" style="display: none;">
+              <button class="viewPdf" onclick='loadPdf("../assets/RampComparatorFiringCircuit.pdf")'>View PDF</button>
+              <button class="viewSimulation" onclick='startSimulation("simulations/ramp_comparator/index.html")'>Simulation</button>
+            </div>
+            <div class="actionContainer" style="display: none;">
+              <button class="viewPdf" onclick='loadPdf("../assets/Cosine_Firing_Scheme.pdf")'>View PDF</button>
+              <button class="viewSimulation" onclick='startSimulation("simulations/cosine_firing/index.html")'>Simulation</button>
+            </div>
+            <div class="actionContainer" style="display: none;">
+              <button class="viewPdf" onclick='loadPdf("../assets/IC-TCA785.pdf")'>View PDF</button>
+              <button class="viewSimulation" onclick='startSimulation("simulations/IC-TCA/index.html")'>Simulation</button>
+            </div>
+          </div>
+      </div>
+
+      <div class="topicContent" id="topic6Section">
+        <h3 style="text-align: center;">Controlled Rectifier</h3>
+        <hr>
+        <p style="color: red; text-align: center; font-weight: normal;">Too see the details, move the mover over the labels/button</p>
+        <div class="topics-container" style="margin: 10px 0;">
+          <button onmouseover="showContent(0)">Half-Wave Rectifier</button>
+          <button onmouseover="showContent(1)">Full-Wave Rectifier</button>
+          <button onmouseover="showContent(2)">Semiconverter</button>
+          <button onmouseover="showContent(3)">Bridge Rectifier</button>
+        </div>
+        <div class="topics-display contentWrapper">
+          <p style="display: none; flex-direction: column"><img src="../assets/img/Sing_Phase_half_wave.png" alt="Half Wave Rectifier"></p>
+          <p style="display: none; flex-direction: column"><img src="../assets/img/cont_fullwave_rect.png" alt="gateFiringCircuit"></p>
+          <p style="display: none; flex-direction: column">
+            <span>In this configuration two thyristors are replaced by power diodes and can be connected in either arm of the bridge.</span>
+            <img src="../assets/img/cont_semiconvertor.png" alt="gateFiringCircuit">
+          </p>
+          <p style="display: none; flex-direction: column">
+            <span>A single-phase fully controlled bridge circuit consists of four thyristor with a resistive load.</span>
+            <img src="../assets/img/cont_bridge_rectifier.png" alt="gateFiringCircuit">
+          </p>
+
+          <div class="actionContainer" style="display: none;">
+            <button class="viewPdf" onclick='loadPdf("../assets/Single_Phase_Half_Wave.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/half/index.html")'>Simulation</button>
+            <button class="viewnumerical" onclick='startSimulation("numericals/half/index.html")'>Numerical</button> 
+          </div>
+          
+          <div class="actionContainer" style="display: none;">
+            <button class="viewPdf" onclick='loadPdf("../assets/Full_wave_rectifier.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/full/index.html")'>Simulation</button>
+            <button class="viewnumerical" onclick='startSimulation("numericals/full/index.html")'>Numerical</button> 
+          </div>
+          
+          <div class="actionContainer" style="display: none;">
+            <button class="viewPdf" onclick='loadPdf("../assets/Semi_converter.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/semi/index.html")'>Simulation</button>
+            <button class="viewnumerical" onclick='startSimulation("numericals/semi/index.html")'>Numerical</button> 
+          </div>
+          
+          <div class="actionContainer" style="display: none;">
+            <button class="viewPdf" onclick='loadPdf("../assets/Bridge_Rectifier.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/bridge/index.html")'>Simulation</button>
+            <button class="viewnumerical" onclick='startSimulation("numericals/bridge/index.html")'>Numerical</button> 
+          </div>
+        </div>
+      </div>
+      
+      <div class="topicContent" id="topic7Section">
+        <h3 style="text-align: center;">Applications</h3>
+        <hr>
+        <div class="topics-display contentWrapper">
+          <b><p>1. Speed control of DC motor.<br><br>2. Metallurgical and chemical industries.<br><br>3. UPS (Uninterruptible Power Supply).<br><br>4. High Voltage DC Transmission lines (HVDC line)<br><br>5. DC drives.</p></b>
+        </div>
+      </div>
+
+      <div class="demo-layout">
+        <a href="../../index/index.html"><img style="position: absolute; left: 20px; top: 5px; width: 20px; height: 20px; border-radius: 50%;" src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+        <h3>Buy full version to unlock all the content & features</h3>
+        <button><a href="https://www.nvistech.com/contact-us-experiential-learning/" target="_blank">Contact @ NVIS Technologies Pvt. Ltd</a></button> 
+      </div>
+
+      
+      <div id="pdfContent">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-pdf">
+        <div id="pdf-viewer"></div>
+      </div>
+      
+      <div id="simulation-frame">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-sim">
+        <iframe id="simIframe" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+  
+  <script src="renderer.js"></script>
+</body>
+</html>

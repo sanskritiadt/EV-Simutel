@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="../../../../shared/js/chart.umd.js"></script>
+</head>
+<body>
+  <div class="app">
+    <div class="circuitslider">
+      <h2 style="font-size: xx-large; color: white; margin: 10px 0;">Full-Wave AC Controller</h2>
+      <img src="../../../assets/img/fullwaveacvoltagecontrol.png" alt="Cycloconverter" style="border-radius: 14px; max-width: 100%; height: auto; margin-bottom: 15px;">
+      <div class="sliderWindow">
+        <label for="slider">R2:</label>
+        <input type="range" id="slider" min="0" max="100" value="0">
+        <span id="sliderValue">180</span>
+        <p style="font-weight: bold; margin: 0; font-size: 20px;">α</p>
+      </div>
+    </div>
+    <div class="chartWindow">
+      <div class="chart-container">
+        <canvas id="chart1"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="chart2"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="chart3"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="chart4"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="chart5"></canvas>
+      </div>
+  </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

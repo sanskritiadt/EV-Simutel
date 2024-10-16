@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="left-header">
+      <img id="header-logo" src="../../shared/img/logo.png" alt="Logo">
+    </div>
+    <div id="header-title">ELECTRIC VEHICLES LEARNING LAB</div>
+  </header>
+  <a href="../../index/index.html"><img src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+  <div class="app">
+    <div class="side-panel" id="left-menu">
+      <h3 style = "text-align: center;">Cyclo Converter</h3>
+      <hr style="border-color: black;">
+        <ul>
+            <li class="active" onclick="componentActive(this)" id="topic1">Introduction</li>
+            <li onclick="componentActive(this)" id="topic2">Cyclo Converter Firing Scheme</li> 
+            <li onclick="componentActive(this)" id="topic3">Single Phase Cycloconverter</li>
+            <li onclick="componentActive(this)" id="topic4">Applications</li> 
+        </ul>
+    </div>
+    <div class="main-panel" id="right-menu">
+      <div class="topicContent" id="topic1Section">
+        <h2 style="text-align: center; margin-bottom: 20px;">Cycloconverter</h2>
+        <hr style="width: 100%;margin: 0;">
+        <p style="text-align: center; font-weight: normal; font-size: 22px; margin: 20px 80px;">Cycloconverter convert input AC voltage at one frequency to output AC voltage at a different frequency through one stage conversion.</p>      
+        <img src="../assets/img/cycloconverter.PNG" alt="Cycloconverter">
+        <h3 style="text-align: center;">Cyclorconverter System</h3>
+        <button class="viewPdf" onclick='loadPdf("../assets/introductionCycloconverter.pdf")'>View PDF</button>
+      </div>
+
+
+      <div class="topicContent" id="topic2Section" style="display: none;">
+        <h2 style="text-align: center; margin-bottom: 20px;">Cycloconverter Firing Scheme</h2>
+        <hr style="width: 100%;margin: 0;">
+        <p style="text-align: center; font-weight: normal; font-size: 22px; margin: 20px 80px;">The function of the control circuit is to deliver  correctly timed, properly shaped, and firing pulses to the gates of the thryistors in the power coverter so as to generate a voltage of the desired wave shape at the output terminals of a cycloconverter.</p>      
+        <img src="../assets/img/cycloconverterFiringCiruit.PNG" alt="Cycloconverter">
+        <h3 style="text-align: center;">Cyclorconverter Firing Circuit</h3>
+        <button class="viewPdf" onclick='loadPdf("../assets/cycloconverterFiringScheme.pdf")'>View PDF</button>
+        <button class="viewSimulation" onclick='startSimulation("simulations/firingScheme/index.html")'>Simulation</button>
+      </div>
+
+
+      <div class="topicContent" id="topic3Section" style="display: none;">
+        <h2 style="text-align: center; margin-bottom: 20px;">Single Phase Cycloconverter</h2>
+        <hr style="width: 100%;margin: 0;">
+        <img src="../assets/img/singlePhaseCycloconverter.PNG" alt="Single Phase Cycloconverter" style="height: 60%;">
+        <h3 style="text-align: center;">Single Phase Cycloconverter Circuit</h3>
+        <button class="viewPdf" onclick='loadPdf("../assets/singlePhaseCycloconverter.pdf")'>View PDF</button>
+        <button class="viewSimulation" onclick='startSimulation("simulations/singlePhase/index.html")'>Simulation</button>
+      </div>
+
+
+      <div class="topicContent" id="topic4Section" style="display: none;">
+        <h2 style="text-align: center; margin-bottom: 20px;">Applications of Cyclor-converter</h2>
+        <hr>
+        <div class="contentWrapper">
+          <b><p>1. Cement mill drives.<br><br>2. Rolling mill drives.<br><br>3. Ship propulsion drives.<br><br>4. Scherbius drives.<br><br>5. Ore grinding mills.<br><br>6. Mine winders</p></b>
+        </div>
+      </div>
+
+      <div class="demo-layout">
+        <a href="../../index/index.html"><img style="position: absolute; left: 20px; top: 5px; width: 20px; height: 20px; border-radius: 50%;" src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+        <h3>Buy full version to unlock all the content & features</h3>
+        <button><a href="https://www.nvistech.com/contact-us-experiential-learning/" target="_blank">Contact @ NVIS Technologies Pvt. Ltd</a></button> 
+      </div>
+
+      <div id="pdfContent">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-pdf">
+        <div id="pdf-viewer"></div>
+      </div>
+
+      <div id="simulation-frame">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-sim">
+        <iframe id="simIframe" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

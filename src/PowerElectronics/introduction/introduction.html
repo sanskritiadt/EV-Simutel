@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+  <script src="../../shared/js/chart.umd.js"></script>
+</head>
+<body>
+  <header>
+    <div class="left-header">
+      <img id="header-logo" src="../../shared/img/logo.png" alt="Logo">
+    </div>
+    <div id="header-title">ELECTRIC VEHICLES LEARNING LAB</div>
+  </header>
+  <a href="../../index/index.html"><img src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+  <div class="app">
+    <div class="side-panel" id="left-menu">
+      <h3 style = "text-align: center;">Introduction</h3>
+      <hr style="border-color: black;">
+        <ul>
+            <li id="introContent" class="active" onclick="componentActive(this)">Power Electronics System</li>
+            <li onclick="componentActive(this)" style="margin-bottom: 0;">Power Electronics Devices</li>
+            <div id="subItem" class="sub-menu">
+              <ol>
+                <li id="powerDiode" onclick="componentActive(this)">Power Diode</li>
+                <li id="shocklevDiode" onclick="componentActive(this)">Shocklev Diode</li>
+                <li id="scr" onclick="componentActive(this)">SCR</li>
+                <li id="diac" onclick="componentActive(this)">Diac</li>
+                <li id="tiac" onclick="componentActive(this)">Triac</li>
+                <li id="isolationTransformer" onclick="componentActive(this)">Isolation Transformer</li>
+              </ol>
+            </div>       
+        </ul>
+    </div>
+    <div class="main-panel" id="right-menu">
+      <div id="introContentSection">
+        <h2>Power Electronics System</h2>
+        <hr>
+        <p>Power electronics is the combination of power, electronics and control. Power electronics can be defined as the application of solid state electronics or the control conversion of electric power.</p>
+        <h4>Range of Power scale: </h4>
+        <div class="powerRanger">
+          <h4>Milliwatts(mW)</h4>
+          <h4>Megawatts(MW)</h4>
+          <h4>Gigawatts(GW)</h4>
+        </div>
+        <img src="../assets/img/powerElectronicsSystem.png" alt="Power Electronics System">
+        <h3>Power Electronics System</h3>
+        <div class="viewpdf-btncontainer">
+          
+        </div>
+        <div class="actionContainer">
+          <button id="viewPdf" class="viewPdf" onclick='loadPdf("../assets/Introduction_of_Power_Electronics.pdf")'>View PDF</button>
+        </div>
+      </div>
+      
+      <div id="pdfContent">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-pdf">
+        <div id="pdf-viewer"></div>
+      </div>
+      <div class="content" style="display: none;" id="powerDiodeSection">
+        <div class="left-col">
+          <h3>Power Diode Symbol</h3>
+          <img src="../assets/img/powerDiode.jpg" alt="Power Diode">
+          <img src="../assets/img/powerDiodeImg.JPG" alt="Power Diode">
+        </div>
+        <div class="right-col">
+          <img src="../assets/img/intro1.PNG" alt="" class="graph-img">
+        </div>
+      </div>
+      <div class="content" style="display: none;" id="shocklevDiodeSection">
+        <div class="left-col">
+          <h3>Shocklev Diode Symbol</h3>
+          <img src="../assets/img/shocklevDiode.jpg" alt="Shocklev Power Diode">
+          <img src="../assets/img/shocklevDiodeImg.JPG" alt="Shocklev Diode Diode">
+        </div>
+        <div class="right-col">
+          <img src="../assets/img/intro2.PNG" alt="" class="graph-img">
+        </div>
+      </div>
+      <div class="content" style="display: none;" id="scrSection">
+        <div class="left-col">
+          <h3>SCR Symbol</h3>
+          <img src="../assets/img/scr.jpg" alt="SCR">
+          <img src="../assets/img/scrImg.JPG" alt="SCR">
+        </div>
+        <div class="right-col">
+          <img src="../assets/img/intro3.PNG" alt="" class="graph-img">
+        </div>
+      </div>
+      <div class="content" style="display: none;" id="diacSection">
+        <div class="left-col">
+          <h3>Diac Symbol</h3>
+          <img src="../assets/img/diac.jpg" alt="diac">
+          <img src="../assets/img/diacImg.jpg" alt="diac">
+        </div>
+        <div class="right-col">
+          <img src="../assets/img/intro4.PNG" alt="" class="graph-img">
+        </div>
+      </div>
+      <div class="content" style="display: none;" id="tiacSection">
+        <div class="left-col">
+          <h3>Triac Symbol</h3>
+          <img src="../assets/img/triac.jpg" alt="triac">
+          <img src="../assets/img/triacImg.jpg" alt="triac">
+        </div>
+        <div class="right-col">
+          <img src="../assets/img/intro5.PNG" alt="" class="graph-img">
+        </div>
+      </div>
+      <div class="content" style="display: none;" id="isolationTransformerSection">
+        <div class="left-col">
+          <h3>Isolation Transformer Symbol</h3>
+          <img src="../assets/img/isolationTransformer.gif" alt="Isolation Transformer">
+          <img src="../assets/img/isolationTransformerImg.JPG" alt="Isolation Transformer">
+        </div>
+        <div class="right-col">
+          <img src="../assets/img/intro6.PNG" alt="" class="graph-img">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

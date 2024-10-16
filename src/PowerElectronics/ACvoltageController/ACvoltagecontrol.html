@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+</head>
+<body >
+  <header>
+    <div class="left-header">
+      <img id="header-logo" src="../../shared/img/logo.png" alt="Logo">
+    </div>
+    <div id="header-title">ELECTRIC VEHICLES LEARNING LAB</div>
+  </header>
+  <a href="../../index/index.html"><img src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+  <div class="app">
+    <div class="side-panel" id="left-menu">
+      <h3 style = "text-align: center;">AC Voltage Controller</h3>
+      <hr style="border-color: black;">
+        <ul>
+            <li class="active" onclick="componentActive(this)" id="topic1">Introduction</li>
+            <li onclick="componentActive(this)" id="topic2">Classification</li>
+            <li onclick="componentActive(this)" id="topic3">Half-Wave AC Controller</li>
+            <li onclick="componentActive(this)" id="topic4">Full-Wave AC Controller</li>
+            <li onclick="componentActive(this)" id="topic5">Application</li> 
+        </ul>
+    </div>
+    <div class="main-panel" id="right-menu">
+      
+
+      <div class="topicContent" id="topic1Section">
+        <h3 style="text-align: center;">Introduction to AC Voltage Controller</h3>
+        <hr>
+        <div class=" contentWrapper">
+          <p>AN AC Voltage controller converts fixed AC vVoltage directlt to a variable AC voltage at same frequency</p>
+          <p><b> AC Voltage Controller are of two types:</b></p>
+          <p><b>(1)Half-Wave AC Voltage Controller: </b> Half-Wave AC Voltage Controller controlled in the half cycle of input AC voltage by varying the Firing angle. </p>
+          <p><b>(2)Half-Wave AC Voltage Controller: </b> Full-Wave AC Voltage Controller controlled in the both half cycle of input AC voltage by varying the Firing angle.</p>
+          
+          <img src="../assets/img/introAcVoltage.png" alt="AC Controller">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/introACVoltage.pdf")'>View PDF</button> 
+          </div>
+        </div>
+      </div>
+
+      <div class="topicContent" id="topic2Section" style="display: none;">
+        <h3 style="text-align: center;">Classification of AC Voltage Controller</h3>
+        <hr>
+        <p style="color: red; text-align: center; font-weight: normal;">Too see the details, move the mover over the labels/button</p>
+        <div class="topics-container" style="margin: 10px 0;">
+          <button onmouseover="showContent(0)">Half-Wave AC Controller</button>
+          <button onmouseover="showContent(1)">Full-Wave AC Voltage</button>
+          
+        </div>
+        <div class="topics-display contentWrapper" >
+          <p class="box"><b style="color: blue;">Half-Wave AC Controller: </b>Single phase half wave AC voltage controller circuit using one SCR and one diode connected in parallel across each other in opposite direction used in most of the AC control applications. The AC power flow to the load can be controlled in the half cycles by varying firing angle. The RMS value of load voltage can be varied by varying firing angle. The half wave AC voltage controller is also referred to a uni- directional controller.</p>
+          <p class="box"><b style="color: blue;">Full-Wave AC Voltage Controller: </b>Single phase full wave AC voltage controller circuit using two SCRs or a single Triac is generally used in most of the AC control applications. The AC power flow to the load can be controlled in both half cycles by varying firing angle. The RMS value of load voltage can be varied by varying firing angle. The full wave AC voltage controller is also referred to a bi-directional controller.</p>
+        </div>
+      </div>
+      
+
+      <!-- Start from here  -->
+      <div class="topicContent" id="topic3Section" style="display: none;">
+        <h3 style="text-align: center;">Half-Wave AC Controller with R,RL-Load</h3>
+        <hr>
+        
+        <div class="topics-display contentWrapper">
+          
+          <img src="../assets/img/halfwaveacvoltagecontrol1.png" alt="Half-Wave AC Controller">
+          <img src="../assets/img/halfwaveacvoltagecontrol2.png" alt="Half-Wave AC Controller">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/Half_AC_V_Controller.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/half_WaveAC/index.html")'>Simulation</button>
+            <button class="viewnumerical" onclick='startSimulation("numericals/Halfwave/index.html")'>Numerical</button>  
+          </div>
+        </div>
+      </div>
+      <div class="topicContent" id="topic4Section" style="display: none;">
+        <h3 style="text-align: center;">Full-Wave AC Controller with R,RL-Load</h3>
+        <hr>
+        
+        <div class="topics-display contentWrapper">
+        
+          <img src="../assets/img/fullwaveacvoltagecontrol.png" alt="Full-Wave AC Controller">
+          <div class="actionContainer">
+            <button class="viewPdf" onclick='loadPdf("../assets/Full_AC_V_Controller.pdf")'>View PDF</button>
+            <button class="viewSimulation" onclick='startSimulation("simulations/full_WaveAC/index.html")'>Simulation</button>
+            <button class="viewnumerical" onclick='startSimulation("numericals/FullWave/index.html")'>Numerical</button>   
+          </div>
+        </div>
+      
+      </div>
+
+      <div class="topicContent" id="topic5Section">
+        <h3 style="text-align: center;">Applications</h3>
+        <hr>
+        <div class="topics-display contentWrapper">
+          <b><p>1.Lighting/Illumunation control of AC power circuits.<br><br>2. Induction Heating .<br><br>3. Industrial Heating and Domestic Heating.<br><br>4. Transformer tap changing (on load transformer tap changing).<br><br>5. Speed control of induction motors(single phase and polyphase AC induction motor control).<br><br>6. AC Magnet controls</p></b>
+        </div>
+      </div>
+
+      <div class="demo-layout">
+        <a href="../../index/index.html"><img style="position: absolute; left: 20px; top: 5px; width: 20px; height: 20px; border-radius: 50%;" src="../../shared/img/back.png" alt="back" class="back-btn"></a>
+        <h3>Buy full version to unlock all the content & features</h3>
+        <button><a href="https://www.nvistech.com/contact-us-experiential-learning/" target="_blank">Contact @ NVIS Technologies Pvt. Ltd</a></button> 
+      </div>
+      
+      <div id="pdfContent">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-pdf">
+        <div id="pdf-viewer"></div>
+      </div>
+
+      <div id="simulation-frame">
+        <img src="../../shared/img/close.svg" alt="exit" id="exit-sim">
+        <iframe id="simIframe" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+  
+  <script src="renderer.js"></script>
+</body>
+</html>

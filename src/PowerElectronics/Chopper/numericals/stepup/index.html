@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="../../../../shared/js/chart.umd.js"></script>
+</head>
+<body>
+  <div class="app">
+    <p><b style="color: red; font-size: 25px;">Numerical</b></p>
+    <p><b>f = <sup>1</sup>/<sub>T</sub> = <sup>1</sup>/<sub>Ton + Toff</sub></b></p>
+    <p><b>α = <sup>Ton</sup>/<sub>Ton + Toff</sub></b></p>
+    <p><b>Eo = <sup>Edc</sup>/<sub>1-α</sub></b></p>
+
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+      <div>
+        <p><b><label for="EdcInput">Edc = </label><input type="number" id="EdcInput" name="EdcInput"></b></p>
+        <p><b><label for="alphaInput">α = </label><input type="number" id="alphaInput" name="alphaInput"></b></p>
+        <p><b><label for="TonInput">Ton = </label><input type="number" id="TonInput" name="TonInput"> %</b></p>
+      </div>
+      <div>
+        <p><b><label for="fInput">f = </label><input type="number" id="fInput" name="fInput"> Hz</b></p>
+        <p><b><label for="TInput">T = </label><input type="number" id="TInput" name="TInput"> msec.</b></p>
+        <p><b><label for="ToffInput">Toff = </label><input type="number" id="ToffInput" name="ToffInput"> %</b></p>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: row;">
+      <button class="viewcalculate" onclick='calculateValues()'>Calculate</button> 
+      <button class="viewcalculate " onclick='resetValues()'>Reset</button> 
+    </div>
+    
+
+    <div id="output"></div>
+  </div>
+
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

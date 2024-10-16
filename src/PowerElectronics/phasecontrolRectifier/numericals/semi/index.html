@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="../../../../shared/js/chart.umd.js"></script>
+</head>
+<body>
+  <div class="app">
+    <p><b style="color: red; font-size: 25px;">Numerical</b></p>
+    <p><b>Edc = <sup>2Em [cos(α)]</sup>/<sub>π</sub></b></p>
+
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+      <div>
+        <p><b><label for="EmInput">Em = </label><input type="number" id="EmInput" name="EmInput"></b></p>
+        <p><b><label for="alphaInput">α = </label><input type="number" id="alphaInput" name="alphaInput">deg</b></p>
+      </div>
+      
+    </div>
+    <div style="display: flex; flex-direction: row;">
+      <button class="viewcalculate" onclick='calculateValues()'>Calculate</button> 
+      <button class="viewcalculate " onclick='resetValues()'>Reset</button> 
+    </div>
+
+    <div id="output"></div>
+  </div>
+
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

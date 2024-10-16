@@ -1,0 +1,223 @@
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.app{
+    display: flex;
+    height: 100%;
+}
+
+.main-panel{
+    width: 75%;
+}
+
+.side-panel {
+    width: 25%;
+    background: rgb(211, 211, 211);
+    color: black;
+    border-right: 1px solid rgb(46, 46, 46);
+    padding-top: 0%;
+    padding: 15px;
+}
+
+.side-panel ul{
+    padding: 0 25px;
+}
+.side-panel ul li{
+    list-style: none;
+    margin: 25px 0;
+    background: white;
+    padding: 10px 0;
+    border: 1px solid rgb(46, 46, 46);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.side-panel ul li:hover{
+    background: #00988e;
+    color: white;
+}
+
+.side-panel ul li.active{
+    background: #00988e;
+    color: white;
+}
+
+.sub-menu ol {
+    list-style: none;
+    padding: 0 15px;
+}
+
+.sub-menu ol li {
+    padding: 5px 15px;
+    transition: 0.2s ease;
+
+}
+  
+.sub-menu li:hover{
+    text-decoration: underline;
+    color: white;
+}
+  
+.sub-menu {
+    background: white;
+    border: 1px solid;
+    border-top: 0;
+    display: flex;  
+    transition: 0.2s ease-in-out;
+    margin: 0 20px;
+    border-radius: 0 0 10px 10px;
+    font-weight: bold;
+    font-size: 15px;
+    justify-content: center;
+}
+
+#enableSub {
+    margin-bottom: 0;
+}
+
+#introContent p {
+    margin: 0 auto;
+    width: 80%;
+    font-size: 17px;
+}
+
+#introContentSection {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#introContentSection h4 {
+    width: 100%;
+    margin-left: 20px;
+    text-align: left;
+}
+
+#introContentSection hr {
+    width: 100%;
+}
+
+
+
+.powerRanger{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.powerRanger h4 {
+    text-align: center !important;
+}
+
+#pdfContent {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+}
+
+#exit-pdf {
+    position: relative;
+    top: 15px;
+    left: 15px;
+    width: 20px;
+    background: white;
+    padding: 8px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+#exit-pdf:hover {
+    filter: invert(1);
+    border: 2px solid white;
+}
+
+#pdf-viewer {
+    width: 60%;
+    height: 90%;
+    display: flex;
+    margin: 0px auto;
+    border: 1px solid #ccc;
+    overflow-y:auto;
+    flex-direction: column;
+}
+  
+#pdf-viewer canvas {
+    display: block;
+    border: 1px solid black;
+}
+
+.actionContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 25%;
+    margin-left: 20px;
+    bottom: 15px;
+}
+
+.viewSimulation{
+    position: absolute;
+    bottom: 15px;
+    font-size: 14px;
+    padding: 8px 15px;
+    background: #00988e;
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    left: 130px;
+    margin-left: auto;
+}
+
+.viewPdf{
+    position: absolute;
+    bottom: 15px;
+    font-size: 14px;
+    padding: 8px 15px;
+    background: #00988e;
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: inherit;
+}
+
+.content {
+    justify-content: space-between;
+}
+
+.left-col {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-col {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-col img{
+    width: 90%;
+    border: 2px solid #616161;
+    border-radius: 10px;
+}
